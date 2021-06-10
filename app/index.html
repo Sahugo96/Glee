@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Glee | Home page</title>
 
-  
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@700&family=Rubik:wght@400;500&display=swap"
@@ -16,11 +15,15 @@
 </head>
 
 <body>
+  <script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.26.14'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+
 
   <div class="container--large">
     <header class="header">
-      <a class="header__logo" href="#">
-        <img class="logo" src="images/logo.png" alt="logo">
+      <a class="header__logo logo" href="index.html">
+        <img class="logo__img" src="images/logo.png" alt="logo">
       </a>
 
       <nav class="menu">
@@ -60,26 +63,26 @@
 
       <div class="user-nav">
         <button class="user-nav__btn search-btn" type="button">
-          <img class="user-nav__img" src="images/search-btn.png" alt="menu">
+          <img class="user-nav__svg user-nav__svg--search" src="images/search.png" alt="search">
         </button>
 
         <div class="user-nav__links">
           <a href="" class="user-nav__link user-nav__link--favorite">
-            <img class="user-nav__img" src="images/heart.png" alt="favorite product">
+            <img class="user-nav__svg user-nav__svg--favorite" src="images/heart.png" alt="your favorite item">
           </a>
           <span class="user-nav__line"></span>
-          <a href="" class="user-nav__link user-nav__link--favorite">
-            <img class="user-nav__img" src="images/basket.png" alt="basket">
+          <a href="" class="user-nav__link user-nav__link--cart">
+            <img class="user-nav__svg user-nav__svg--cart" src="images/cart.png" alt="your cart">
           </a>
         </div>
 
         <button class="user-nav__btn menu-btn" type="button">
-          <img class="user-nav__img" src="images/menu-btn.png" alt="menu">
+          <img class="user-nav__svg user-nav__svg--grid" src="images/grid.png" alt="menu">
         </button>
       </div>
     </header>
   </div>
-   
+
   <main>
 
     <section class="top">
@@ -96,7 +99,7 @@
                   <span class="top__text">
                     Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
                   </span>
-                  <a href="" class="top__link">
+                  <a href="" class="top__link link">
                     Shop Now
                   </a>
                 </div>
@@ -104,7 +107,7 @@
               </div>
             </div>
           </li>
-          
+
           <li class="top__item">
             <div class="container">
               <div class="top__inner">
@@ -124,7 +127,7 @@
               </div>
             </div>
           </li>
-          
+
           <li class="top__item">
             <div class="container">
               <div class="top__inner">
@@ -144,15 +147,15 @@
               </div>
             </div>
           </li>
-        </ul>    
+        </ul>
       </div>
     </section>
-      
+
     <section class="benefit">
       <div class="container--large">
         <ul class="benefit__list">
           <li class="benefit__item">
-            <img class="benefit__img" src="" alt="">
+            <img class="benefit__img" src="images/support.png" alt="support 24/7">
             <div class="benefit__wrapper">
               <h2 class="benefit__title">
                 Support 24/7.
@@ -165,7 +168,7 @@
           </li>
 
           <li class="benefit__item">
-            <img class="benefit__img" src="" alt="">
+            <img class="benefit__img" src="images/delivery.png" alt="delivery">
             <div class="benefit__wrapper">
               <h2 class="benefit__title">
                 Delivery.
@@ -177,7 +180,7 @@
           </li>
 
           <li class="benefit__item">
-            <img class="benefit__img" src="" alt="">
+            <img class="benefit__img" src="images/safety.png" alt="safety">
             <div class="benefit__wrapper">
               <h2 class="benefit__title">
                 100% Payment secure.
@@ -191,10 +194,568 @@
         </ul>
       </div>
     </section>
-      
+
+    <section class="week-products">
+      <h2 class="week-products__title title">
+        Products of the week
+      </h2>
+
+      <div class="container">
+        <ul class="week-products__list product-list">
+          <li class="product-list__item">
+            <button class="product-list__btn" type="button" data-filter="all">
+              All
+            </button>
+          </li>
+          <li class="product-list__item">
+            <button class="product-list__btn" type="button" data-filter=".category-furnitures">
+              Furnitures
+            </button>
+          </li>
+          <li class="product-list__item">
+            <button class="product-list__btn" type="button" data-filter=".category-chairs">
+              Chairs
+            </button>
+          </li>
+          <li class="product-list__item">
+            <button class="product-list__btn" type="button" data-filter=".category-lighting">
+              Lighting
+            </button>
+          </li>
+          <li class="product-list__item">
+            <button class="product-list__btn" type="button" data-filter=".category-decor">
+              Decor
+            </button>
+          </li>
+        </ul>
+
+        <ul class="week-products__items">
+          <li class="week-products__item mix category-decor category-chairs">
+            <a data-fancybox="week-products" class="week-products__link" href="#">
+              <img class="week-products__img" src="images/gallery/gallery-1.png" alt="Wooden radio">
+            </a>
+
+            <ul class="week-products__btns">
+              <li class="week-products__box">
+                <button class="week-products__btn" type="button">
+                  <svg class="week-products__icon" version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 22 22" width="22" height="22">
+                    <path id="Forma 1"
+                      d="M20.45 17.8L15.86 13.21C15.18 14.27 14.27 15.18 13.21 15.86L17.8 20.45C18.53 21.18 19.72 21.18 20.45 20.45C21.18 19.72 21.18 18.53 20.45 17.8ZM16 8.5C16 4.36 12.64 1 8.5 1C4.36 1 1 4.36 1 8.5C1 12.64 4.36 16 8.5 16C12.64 16 16 12.64 16 8.5ZM8.5 14.12C5.4 14.12 2.87 11.6 2.87 8.5C2.87 5.4 5.4 2.87 8.5 2.87C11.6 2.87 14.12 5.4 14.12 8.5C14.12 11.6 11.6 14.12 8.5 14.12ZM4.12 8.5L5.37 8.5C5.37 6.78 6.78 5.37 8.5 5.37L8.5 4.12C6.09 4.12 4.12 6.09 4.12 8.5Z" />
+                  </svg>
+                </button>
+              </li>
+            
+              <li class="week-products__box">
+                <button class="week-products__btn" type="button">
+                  <svg class="week-products__icon" version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 22" width="24" height="22">
+                    <path id="Forma 1"
+                      d="M1.81 2.63L4.15 2.63L7.47 14.67C7.57 15.02 7.89 15.26 8.26 15.26L18.47 15.26C18.8 15.26 19.08 15.07 19.22 14.78L22.93 6.22C23.04 5.96 23.02 5.67 22.87 5.44C22.72 5.21 22.46 5.07 22.19 5.07L10.9 5.07C10.45 5.07 10.09 5.44 10.09 5.89C10.09 6.34 10.45 6.71 10.9 6.71L20.94 6.71L17.93 13.63L8.87 13.63L5.54 1.6C5.45 1.24 5.12 1 4.76 1L1.81 1C1.37 1 1 1.37 1 1.81C1 2.26 1.37 2.63 1.81 2.63ZM7.48 21C8.5 21 9.33 20.17 9.33 19.15C9.33 18.13 8.5 17.3 7.48 17.3C6.47 17.3 5.64 18.13 5.64 19.15C5.64 20.17 6.47 21 7.48 21ZM19.01 21C19.05 21 19.11 21 19.15 21C19.64 20.96 20.09 20.74 20.41 20.36C20.74 19.99 20.89 19.52 20.86 19.02C20.79 18.01 19.91 17.23 18.89 17.3C17.87 17.37 17.11 18.27 17.18 19.27C17.25 20.24 18.05 21 19.01 21Z" />
+                  </svg>
+                </button>
+              </li>
+            
+              <li class="week-products__box">
+                <button class="week-products__btn" type="button">
+                  <svg class="week-products__icon" version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 20" width="24" height="20">
+                    <path id="Forma 1"
+                      d="M22.99 6.82C22.91 5.27 22.25 3.81 21.14 2.72C20.02 1.61 18.55 1 17 1C14.69 1 13.05 2.78 12.18 3.74C12.13 3.8 12.07 3.86 12.02 3.91C11.99 3.88 11.96 3.85 11.94 3.82C11.13 2.9 9.46 1 7 1C5.45 1 3.98 1.61 2.86 2.72C1.75 3.81 1.09 5.27 1.01 6.82C0.93 8.36 1.32 9.7 2.28 11.16C3.14 12.47 5.38 14.53 7.04 15.91C8.75 17.32 10.99 19 12.01 19C13.04 19 15.28 17.32 16.97 15.91C18.62 14.54 20.85 12.48 21.72 11.16C22.37 10.17 23.1 8.79 22.99 6.82ZM20.61 10.43C19.98 11.39 18.2 13.17 16.18 14.85C13.78 16.85 12.35 17.64 12.01 17.67C11.67 17.64 10.24 16.84 7.82 14.83C5.79 13.15 4.01 11.38 3.39 10.43C2.59 9.22 2.27 8.13 2.33 6.89C2.47 4.37 4.56 2.32 7 2.32C8.86 2.32 10.21 3.86 10.94 4.69C11.37 5.18 11.6 5.45 12 5.45C12.41 5.45 12.67 5.16 13.15 4.64C13.94 3.77 15.27 2.32 17 2.32C19.44 2.32 21.53 4.37 21.67 6.89C21.74 8.15 21.42 9.2 20.61 10.43Z" />
+                  </svg>
+                </button>
+              </li>
+            </ul>
+
+            <div class="week-products__content">
+              <h3 class="week-products__subtitle">
+                Wooden radio
+              </h3>
+              <span class="week-products__cost">
+                $29.00
+              </span>
+            </div>
+          </li>
+
+          <li class="week-products__item mix category-chairs">
+            <a data-fancybox="week-products" class="week-products__link" href="#">
+              <img class="week-products__img" src="images/gallery/gallery-2.png" alt="Wooden radio">
+            </a>
+
+            <ul class="week-products__btns">
+              <li class="week-products__box">
+                <button class="week-products__btn" type="button">
+                  <svg class="week-products__icon" version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 22 22" width="22" height="22">
+                    <path id="Forma 1"
+                      d="M20.45 17.8L15.86 13.21C15.18 14.27 14.27 15.18 13.21 15.86L17.8 20.45C18.53 21.18 19.72 21.18 20.45 20.45C21.18 19.72 21.18 18.53 20.45 17.8ZM16 8.5C16 4.36 12.64 1 8.5 1C4.36 1 1 4.36 1 8.5C1 12.64 4.36 16 8.5 16C12.64 16 16 12.64 16 8.5ZM8.5 14.12C5.4 14.12 2.87 11.6 2.87 8.5C2.87 5.4 5.4 2.87 8.5 2.87C11.6 2.87 14.12 5.4 14.12 8.5C14.12 11.6 11.6 14.12 8.5 14.12ZM4.12 8.5L5.37 8.5C5.37 6.78 6.78 5.37 8.5 5.37L8.5 4.12C6.09 4.12 4.12 6.09 4.12 8.5Z" />
+                  </svg>
+                </button>
+              </li>
+            
+              <li class="week-products__box">
+                <button class="week-products__btn" type="button">
+                  <svg class="week-products__icon" version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 22" width="24" height="22">
+                    <path id="Forma 1"
+                      d="M1.81 2.63L4.15 2.63L7.47 14.67C7.57 15.02 7.89 15.26 8.26 15.26L18.47 15.26C18.8 15.26 19.08 15.07 19.22 14.78L22.93 6.22C23.04 5.96 23.02 5.67 22.87 5.44C22.72 5.21 22.46 5.07 22.19 5.07L10.9 5.07C10.45 5.07 10.09 5.44 10.09 5.89C10.09 6.34 10.45 6.71 10.9 6.71L20.94 6.71L17.93 13.63L8.87 13.63L5.54 1.6C5.45 1.24 5.12 1 4.76 1L1.81 1C1.37 1 1 1.37 1 1.81C1 2.26 1.37 2.63 1.81 2.63ZM7.48 21C8.5 21 9.33 20.17 9.33 19.15C9.33 18.13 8.5 17.3 7.48 17.3C6.47 17.3 5.64 18.13 5.64 19.15C5.64 20.17 6.47 21 7.48 21ZM19.01 21C19.05 21 19.11 21 19.15 21C19.64 20.96 20.09 20.74 20.41 20.36C20.74 19.99 20.89 19.52 20.86 19.02C20.79 18.01 19.91 17.23 18.89 17.3C17.87 17.37 17.11 18.27 17.18 19.27C17.25 20.24 18.05 21 19.01 21Z" />
+                  </svg>
+                </button>
+              </li>
+            
+              <li class="week-products__box">
+                <button class="week-products__btn" type="button">
+                  <svg class="week-products__icon" version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 20" width="24" height="20">
+                    <path id="Forma 1"
+                      d="M22.99 6.82C22.91 5.27 22.25 3.81 21.14 2.72C20.02 1.61 18.55 1 17 1C14.69 1 13.05 2.78 12.18 3.74C12.13 3.8 12.07 3.86 12.02 3.91C11.99 3.88 11.96 3.85 11.94 3.82C11.13 2.9 9.46 1 7 1C5.45 1 3.98 1.61 2.86 2.72C1.75 3.81 1.09 5.27 1.01 6.82C0.93 8.36 1.32 9.7 2.28 11.16C3.14 12.47 5.38 14.53 7.04 15.91C8.75 17.32 10.99 19 12.01 19C13.04 19 15.28 17.32 16.97 15.91C18.62 14.54 20.85 12.48 21.72 11.16C22.37 10.17 23.1 8.79 22.99 6.82ZM20.61 10.43C19.98 11.39 18.2 13.17 16.18 14.85C13.78 16.85 12.35 17.64 12.01 17.67C11.67 17.64 10.24 16.84 7.82 14.83C5.79 13.15 4.01 11.38 3.39 10.43C2.59 9.22 2.27 8.13 2.33 6.89C2.47 4.37 4.56 2.32 7 2.32C8.86 2.32 10.21 3.86 10.94 4.69C11.37 5.18 11.6 5.45 12 5.45C12.41 5.45 12.67 5.16 13.15 4.64C13.94 3.77 15.27 2.32 17 2.32C19.44 2.32 21.53 4.37 21.67 6.89C21.74 8.15 21.42 9.2 20.61 10.43Z" />
+                  </svg>
+                </button>
+              </li>
+            </ul>
+
+            <div class="week-products__content">
+              <h3 class="week-products__subtitle">
+                Wooden chair
+              </h3>
+              <span class="week-products__cost">
+                $29.00
+              </span>
+            </div>
+          </li>
+
+          <li class="week-products__item mix category-chairs">
+            <a data-fancybox="week-products" class="week-products__link" href="#">
+              <img class="week-products__img" src="images/gallery/gallery-3.png" alt="Wooden radio">
+            </a>
+
+            <ul class="week-products__btns">
+              <li class="week-products__box">
+                <button class="week-products__btn" type="button">
+                  <svg class="week-products__icon" version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 22 22" width="22" height="22">
+                    <path id="Forma 1"
+                      d="M20.45 17.8L15.86 13.21C15.18 14.27 14.27 15.18 13.21 15.86L17.8 20.45C18.53 21.18 19.72 21.18 20.45 20.45C21.18 19.72 21.18 18.53 20.45 17.8ZM16 8.5C16 4.36 12.64 1 8.5 1C4.36 1 1 4.36 1 8.5C1 12.64 4.36 16 8.5 16C12.64 16 16 12.64 16 8.5ZM8.5 14.12C5.4 14.12 2.87 11.6 2.87 8.5C2.87 5.4 5.4 2.87 8.5 2.87C11.6 2.87 14.12 5.4 14.12 8.5C14.12 11.6 11.6 14.12 8.5 14.12ZM4.12 8.5L5.37 8.5C5.37 6.78 6.78 5.37 8.5 5.37L8.5 4.12C6.09 4.12 4.12 6.09 4.12 8.5Z" />
+                  </svg>
+                </button>
+              </li>
+            
+              <li class="week-products__box">
+                <button class="week-products__btn" type="button">
+                  <svg class="week-products__icon" version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 22" width="24" height="22">
+                    <path id="Forma 1"
+                      d="M1.81 2.63L4.15 2.63L7.47 14.67C7.57 15.02 7.89 15.26 8.26 15.26L18.47 15.26C18.8 15.26 19.08 15.07 19.22 14.78L22.93 6.22C23.04 5.96 23.02 5.67 22.87 5.44C22.72 5.21 22.46 5.07 22.19 5.07L10.9 5.07C10.45 5.07 10.09 5.44 10.09 5.89C10.09 6.34 10.45 6.71 10.9 6.71L20.94 6.71L17.93 13.63L8.87 13.63L5.54 1.6C5.45 1.24 5.12 1 4.76 1L1.81 1C1.37 1 1 1.37 1 1.81C1 2.26 1.37 2.63 1.81 2.63ZM7.48 21C8.5 21 9.33 20.17 9.33 19.15C9.33 18.13 8.5 17.3 7.48 17.3C6.47 17.3 5.64 18.13 5.64 19.15C5.64 20.17 6.47 21 7.48 21ZM19.01 21C19.05 21 19.11 21 19.15 21C19.64 20.96 20.09 20.74 20.41 20.36C20.74 19.99 20.89 19.52 20.86 19.02C20.79 18.01 19.91 17.23 18.89 17.3C17.87 17.37 17.11 18.27 17.18 19.27C17.25 20.24 18.05 21 19.01 21Z" />
+                  </svg>
+                </button>
+              </li>
+            
+              <li class="week-products__box">
+                <button class="week-products__btn" type="button">
+                  <svg class="week-products__icon" version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 20" width="24" height="20">
+                    <path id="Forma 1"
+                      d="M22.99 6.82C22.91 5.27 22.25 3.81 21.14 2.72C20.02 1.61 18.55 1 17 1C14.69 1 13.05 2.78 12.18 3.74C12.13 3.8 12.07 3.86 12.02 3.91C11.99 3.88 11.96 3.85 11.94 3.82C11.13 2.9 9.46 1 7 1C5.45 1 3.98 1.61 2.86 2.72C1.75 3.81 1.09 5.27 1.01 6.82C0.93 8.36 1.32 9.7 2.28 11.16C3.14 12.47 5.38 14.53 7.04 15.91C8.75 17.32 10.99 19 12.01 19C13.04 19 15.28 17.32 16.97 15.91C18.62 14.54 20.85 12.48 21.72 11.16C22.37 10.17 23.1 8.79 22.99 6.82ZM20.61 10.43C19.98 11.39 18.2 13.17 16.18 14.85C13.78 16.85 12.35 17.64 12.01 17.67C11.67 17.64 10.24 16.84 7.82 14.83C5.79 13.15 4.01 11.38 3.39 10.43C2.59 9.22 2.27 8.13 2.33 6.89C2.47 4.37 4.56 2.32 7 2.32C8.86 2.32 10.21 3.86 10.94 4.69C11.37 5.18 11.6 5.45 12 5.45C12.41 5.45 12.67 5.16 13.15 4.64C13.94 3.77 15.27 2.32 17 2.32C19.44 2.32 21.53 4.37 21.67 6.89C21.74 8.15 21.42 9.2 20.61 10.43Z" />
+                  </svg>
+                </button>
+              </li>
+            </ul>
+
+            <div class="week-products__content">
+              <h3 class="week-products__subtitle">
+                White chair
+              </h3>
+              <span class="week-products__cost">
+                $29.00
+              </span>
+            </div>
+          </li>
+
+          <li class="week-products__item mix category-decor">
+            <a data-fancybox="week-products" class="week-products__link" href="#">
+              <img class="week-products__img" src="images/gallery/gallery-4.png" alt="Wooden radio">
+            </a>
+            
+            <ul class="week-products__btns">
+              <li class="week-products__box">
+                <button class="week-products__btn" type="button">
+                  <svg class="week-products__icon" version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 22 22" width="22" height="22">
+                    <path id="Forma 1"
+                      d="M20.45 17.8L15.86 13.21C15.18 14.27 14.27 15.18 13.21 15.86L17.8 20.45C18.53 21.18 19.72 21.18 20.45 20.45C21.18 19.72 21.18 18.53 20.45 17.8ZM16 8.5C16 4.36 12.64 1 8.5 1C4.36 1 1 4.36 1 8.5C1 12.64 4.36 16 8.5 16C12.64 16 16 12.64 16 8.5ZM8.5 14.12C5.4 14.12 2.87 11.6 2.87 8.5C2.87 5.4 5.4 2.87 8.5 2.87C11.6 2.87 14.12 5.4 14.12 8.5C14.12 11.6 11.6 14.12 8.5 14.12ZM4.12 8.5L5.37 8.5C5.37 6.78 6.78 5.37 8.5 5.37L8.5 4.12C6.09 4.12 4.12 6.09 4.12 8.5Z" />
+                  </svg>
+                </button>
+              </li>
+            
+              <li class="week-products__box">
+                <button class="week-products__btn" type="button">
+                  <svg class="week-products__icon" version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 22" width="24" height="22">
+                    <path id="Forma 1"
+                      d="M1.81 2.63L4.15 2.63L7.47 14.67C7.57 15.02 7.89 15.26 8.26 15.26L18.47 15.26C18.8 15.26 19.08 15.07 19.22 14.78L22.93 6.22C23.04 5.96 23.02 5.67 22.87 5.44C22.72 5.21 22.46 5.07 22.19 5.07L10.9 5.07C10.45 5.07 10.09 5.44 10.09 5.89C10.09 6.34 10.45 6.71 10.9 6.71L20.94 6.71L17.93 13.63L8.87 13.63L5.54 1.6C5.45 1.24 5.12 1 4.76 1L1.81 1C1.37 1 1 1.37 1 1.81C1 2.26 1.37 2.63 1.81 2.63ZM7.48 21C8.5 21 9.33 20.17 9.33 19.15C9.33 18.13 8.5 17.3 7.48 17.3C6.47 17.3 5.64 18.13 5.64 19.15C5.64 20.17 6.47 21 7.48 21ZM19.01 21C19.05 21 19.11 21 19.15 21C19.64 20.96 20.09 20.74 20.41 20.36C20.74 19.99 20.89 19.52 20.86 19.02C20.79 18.01 19.91 17.23 18.89 17.3C17.87 17.37 17.11 18.27 17.18 19.27C17.25 20.24 18.05 21 19.01 21Z" />
+                  </svg>
+                </button>
+              </li>
+            
+              <li class="week-products__box">
+                <button class="week-products__btn" type="button">
+                  <svg class="week-products__icon" version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 20" width="24" height="20">
+                    <path id="Forma 1"
+                      d="M22.99 6.82C22.91 5.27 22.25 3.81 21.14 2.72C20.02 1.61 18.55 1 17 1C14.69 1 13.05 2.78 12.18 3.74C12.13 3.8 12.07 3.86 12.02 3.91C11.99 3.88 11.96 3.85 11.94 3.82C11.13 2.9 9.46 1 7 1C5.45 1 3.98 1.61 2.86 2.72C1.75 3.81 1.09 5.27 1.01 6.82C0.93 8.36 1.32 9.7 2.28 11.16C3.14 12.47 5.38 14.53 7.04 15.91C8.75 17.32 10.99 19 12.01 19C13.04 19 15.28 17.32 16.97 15.91C18.62 14.54 20.85 12.48 21.72 11.16C22.37 10.17 23.1 8.79 22.99 6.82ZM20.61 10.43C19.98 11.39 18.2 13.17 16.18 14.85C13.78 16.85 12.35 17.64 12.01 17.67C11.67 17.64 10.24 16.84 7.82 14.83C5.79 13.15 4.01 11.38 3.39 10.43C2.59 9.22 2.27 8.13 2.33 6.89C2.47 4.37 4.56 2.32 7 2.32C8.86 2.32 10.21 3.86 10.94 4.69C11.37 5.18 11.6 5.45 12 5.45C12.41 5.45 12.67 5.16 13.15 4.64C13.94 3.77 15.27 2.32 17 2.32C19.44 2.32 21.53 4.37 21.67 6.89C21.74 8.15 21.42 9.2 20.61 10.43Z" />
+                  </svg>
+                </button>
+              </li>
+            </ul>
+
+            <div class="week-products__content">
+              <h3 class="week-products__subtitle">
+                Retro table
+              </h3>
+              <span class="week-products__cost">
+                $29.00
+              </span>
+            </div>
+          </li>
+
+          <li class="week-products__item mix category-chairs">
+            <a data-fancybox="week-products" class="week-products__link" href="#">
+              <img class="week-products__img" src="images/gallery/gallery-5.png" alt="Wooden radio">
+            </a>
+
+            <ul class="week-products__btns">
+              <li class="week-products__box">
+                <button class="week-products__btn" type="button">
+                  <svg class="week-products__icon" version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 22 22" width="22" height="22">
+                    <path id="Forma 1"
+                      d="M20.45 17.8L15.86 13.21C15.18 14.27 14.27 15.18 13.21 15.86L17.8 20.45C18.53 21.18 19.72 21.18 20.45 20.45C21.18 19.72 21.18 18.53 20.45 17.8ZM16 8.5C16 4.36 12.64 1 8.5 1C4.36 1 1 4.36 1 8.5C1 12.64 4.36 16 8.5 16C12.64 16 16 12.64 16 8.5ZM8.5 14.12C5.4 14.12 2.87 11.6 2.87 8.5C2.87 5.4 5.4 2.87 8.5 2.87C11.6 2.87 14.12 5.4 14.12 8.5C14.12 11.6 11.6 14.12 8.5 14.12ZM4.12 8.5L5.37 8.5C5.37 6.78 6.78 5.37 8.5 5.37L8.5 4.12C6.09 4.12 4.12 6.09 4.12 8.5Z" />
+                  </svg>
+                </button>
+              </li>
+            
+              <li class="week-products__box">
+                <button class="week-products__btn" type="button">
+                  <svg class="week-products__icon" version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 22" width="24" height="22">
+                    <path id="Forma 1"
+                      d="M1.81 2.63L4.15 2.63L7.47 14.67C7.57 15.02 7.89 15.26 8.26 15.26L18.47 15.26C18.8 15.26 19.08 15.07 19.22 14.78L22.93 6.22C23.04 5.96 23.02 5.67 22.87 5.44C22.72 5.21 22.46 5.07 22.19 5.07L10.9 5.07C10.45 5.07 10.09 5.44 10.09 5.89C10.09 6.34 10.45 6.71 10.9 6.71L20.94 6.71L17.93 13.63L8.87 13.63L5.54 1.6C5.45 1.24 5.12 1 4.76 1L1.81 1C1.37 1 1 1.37 1 1.81C1 2.26 1.37 2.63 1.81 2.63ZM7.48 21C8.5 21 9.33 20.17 9.33 19.15C9.33 18.13 8.5 17.3 7.48 17.3C6.47 17.3 5.64 18.13 5.64 19.15C5.64 20.17 6.47 21 7.48 21ZM19.01 21C19.05 21 19.11 21 19.15 21C19.64 20.96 20.09 20.74 20.41 20.36C20.74 19.99 20.89 19.52 20.86 19.02C20.79 18.01 19.91 17.23 18.89 17.3C17.87 17.37 17.11 18.27 17.18 19.27C17.25 20.24 18.05 21 19.01 21Z" />
+                  </svg>
+                </button>
+              </li>
+            
+              <li class="week-products__box">
+                <button class="week-products__btn" type="button">
+                  <svg class="week-products__icon" version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 20" width="24" height="20">
+                    <path id="Forma 1"
+                      d="M22.99 6.82C22.91 5.27 22.25 3.81 21.14 2.72C20.02 1.61 18.55 1 17 1C14.69 1 13.05 2.78 12.18 3.74C12.13 3.8 12.07 3.86 12.02 3.91C11.99 3.88 11.96 3.85 11.94 3.82C11.13 2.9 9.46 1 7 1C5.45 1 3.98 1.61 2.86 2.72C1.75 3.81 1.09 5.27 1.01 6.82C0.93 8.36 1.32 9.7 2.28 11.16C3.14 12.47 5.38 14.53 7.04 15.91C8.75 17.32 10.99 19 12.01 19C13.04 19 15.28 17.32 16.97 15.91C18.62 14.54 20.85 12.48 21.72 11.16C22.37 10.17 23.1 8.79 22.99 6.82ZM20.61 10.43C19.98 11.39 18.2 13.17 16.18 14.85C13.78 16.85 12.35 17.64 12.01 17.67C11.67 17.64 10.24 16.84 7.82 14.83C5.79 13.15 4.01 11.38 3.39 10.43C2.59 9.22 2.27 8.13 2.33 6.89C2.47 4.37 4.56 2.32 7 2.32C8.86 2.32 10.21 3.86 10.94 4.69C11.37 5.18 11.6 5.45 12 5.45C12.41 5.45 12.67 5.16 13.15 4.64C13.94 3.77 15.27 2.32 17 2.32C19.44 2.32 21.53 4.37 21.67 6.89C21.74 8.15 21.42 9.2 20.61 10.43Z" />
+                  </svg>
+                </button>
+              </li>
+            </ul>
+
+            <div class="week-products__content">
+              <h3 class="week-products__subtitle">
+                Wooden radio
+              </h3>
+              <span class="week-products__cost">
+                $29.00
+              </span>
+            </div>
+          </li>
+
+          <li class="week-products__item mix category-chairs">
+            <a data-fancybox="week-products" class="week-products__link" href="#">
+              <img class="week-products__img" src="images/gallery/gallery-6.png" alt="Wooden radio">
+            </a>
+
+            <ul class="week-products__btns">
+              <li class="week-products__box">
+                <button class="week-products__btn" type="button">
+                  <svg class="week-products__icon" version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 22 22" width="22" height="22">
+                    <path id="Forma 1"
+                      d="M20.45 17.8L15.86 13.21C15.18 14.27 14.27 15.18 13.21 15.86L17.8 20.45C18.53 21.18 19.72 21.18 20.45 20.45C21.18 19.72 21.18 18.53 20.45 17.8ZM16 8.5C16 4.36 12.64 1 8.5 1C4.36 1 1 4.36 1 8.5C1 12.64 4.36 16 8.5 16C12.64 16 16 12.64 16 8.5ZM8.5 14.12C5.4 14.12 2.87 11.6 2.87 8.5C2.87 5.4 5.4 2.87 8.5 2.87C11.6 2.87 14.12 5.4 14.12 8.5C14.12 11.6 11.6 14.12 8.5 14.12ZM4.12 8.5L5.37 8.5C5.37 6.78 6.78 5.37 8.5 5.37L8.5 4.12C6.09 4.12 4.12 6.09 4.12 8.5Z" />
+                  </svg>
+                </button>
+              </li>
+            
+              <li class="week-products__box">
+                <button class="week-products__btn" type="button">
+                  <svg class="week-products__icon" version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 22" width="24" height="22">
+                    <path id="Forma 1"
+                      d="M1.81 2.63L4.15 2.63L7.47 14.67C7.57 15.02 7.89 15.26 8.26 15.26L18.47 15.26C18.8 15.26 19.08 15.07 19.22 14.78L22.93 6.22C23.04 5.96 23.02 5.67 22.87 5.44C22.72 5.21 22.46 5.07 22.19 5.07L10.9 5.07C10.45 5.07 10.09 5.44 10.09 5.89C10.09 6.34 10.45 6.71 10.9 6.71L20.94 6.71L17.93 13.63L8.87 13.63L5.54 1.6C5.45 1.24 5.12 1 4.76 1L1.81 1C1.37 1 1 1.37 1 1.81C1 2.26 1.37 2.63 1.81 2.63ZM7.48 21C8.5 21 9.33 20.17 9.33 19.15C9.33 18.13 8.5 17.3 7.48 17.3C6.47 17.3 5.64 18.13 5.64 19.15C5.64 20.17 6.47 21 7.48 21ZM19.01 21C19.05 21 19.11 21 19.15 21C19.64 20.96 20.09 20.74 20.41 20.36C20.74 19.99 20.89 19.52 20.86 19.02C20.79 18.01 19.91 17.23 18.89 17.3C17.87 17.37 17.11 18.27 17.18 19.27C17.25 20.24 18.05 21 19.01 21Z" />
+                  </svg>
+                </button>
+              </li>
+            
+              <li class="week-products__box">
+                <button class="week-products__btn" type="button">
+                  <svg class="week-products__icon" version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 20" width="24" height="20">
+                    <path id="Forma 1"
+                      d="M22.99 6.82C22.91 5.27 22.25 3.81 21.14 2.72C20.02 1.61 18.55 1 17 1C14.69 1 13.05 2.78 12.18 3.74C12.13 3.8 12.07 3.86 12.02 3.91C11.99 3.88 11.96 3.85 11.94 3.82C11.13 2.9 9.46 1 7 1C5.45 1 3.98 1.61 2.86 2.72C1.75 3.81 1.09 5.27 1.01 6.82C0.93 8.36 1.32 9.7 2.28 11.16C3.14 12.47 5.38 14.53 7.04 15.91C8.75 17.32 10.99 19 12.01 19C13.04 19 15.28 17.32 16.97 15.91C18.62 14.54 20.85 12.48 21.72 11.16C22.37 10.17 23.1 8.79 22.99 6.82ZM20.61 10.43C19.98 11.39 18.2 13.17 16.18 14.85C13.78 16.85 12.35 17.64 12.01 17.67C11.67 17.64 10.24 16.84 7.82 14.83C5.79 13.15 4.01 11.38 3.39 10.43C2.59 9.22 2.27 8.13 2.33 6.89C2.47 4.37 4.56 2.32 7 2.32C8.86 2.32 10.21 3.86 10.94 4.69C11.37 5.18 11.6 5.45 12 5.45C12.41 5.45 12.67 5.16 13.15 4.64C13.94 3.77 15.27 2.32 17 2.32C19.44 2.32 21.53 4.37 21.67 6.89C21.74 8.15 21.42 9.2 20.61 10.43Z" />
+                  </svg>
+                </button>
+              </li>
+            </ul>
+
+            <div class="week-products__content">
+              <h3 class="week-products__subtitle">
+                Wooden chair
+              </h3>
+              <span class="week-products__cost">
+                $29.00
+              </span>
+            </div>
+          </li>
+
+          <li class="week-products__item mix category-chairs">
+            <a data-fancybox="week-products" class="week-products__link" href="#">
+              <img class="week-products__img" src="images/gallery/gallery-7.png" alt="Wooden radio">
+            </a>
+
+            <ul class="week-products__btns">
+              <li class="week-products__box">
+                <button class="week-products__btn" type="button">
+                  <svg class="week-products__icon" version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 22 22" width="22" height="22">
+                    <path id="Forma 1"
+                      d="M20.45 17.8L15.86 13.21C15.18 14.27 14.27 15.18 13.21 15.86L17.8 20.45C18.53 21.18 19.72 21.18 20.45 20.45C21.18 19.72 21.18 18.53 20.45 17.8ZM16 8.5C16 4.36 12.64 1 8.5 1C4.36 1 1 4.36 1 8.5C1 12.64 4.36 16 8.5 16C12.64 16 16 12.64 16 8.5ZM8.5 14.12C5.4 14.12 2.87 11.6 2.87 8.5C2.87 5.4 5.4 2.87 8.5 2.87C11.6 2.87 14.12 5.4 14.12 8.5C14.12 11.6 11.6 14.12 8.5 14.12ZM4.12 8.5L5.37 8.5C5.37 6.78 6.78 5.37 8.5 5.37L8.5 4.12C6.09 4.12 4.12 6.09 4.12 8.5Z" />
+                  </svg>
+                </button>
+              </li>
+            
+              <li class="week-products__box">
+                <button class="week-products__btn" type="button">
+                  <svg class="week-products__icon" version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 22" width="24" height="22">
+                    <path id="Forma 1"
+                      d="M1.81 2.63L4.15 2.63L7.47 14.67C7.57 15.02 7.89 15.26 8.26 15.26L18.47 15.26C18.8 15.26 19.08 15.07 19.22 14.78L22.93 6.22C23.04 5.96 23.02 5.67 22.87 5.44C22.72 5.21 22.46 5.07 22.19 5.07L10.9 5.07C10.45 5.07 10.09 5.44 10.09 5.89C10.09 6.34 10.45 6.71 10.9 6.71L20.94 6.71L17.93 13.63L8.87 13.63L5.54 1.6C5.45 1.24 5.12 1 4.76 1L1.81 1C1.37 1 1 1.37 1 1.81C1 2.26 1.37 2.63 1.81 2.63ZM7.48 21C8.5 21 9.33 20.17 9.33 19.15C9.33 18.13 8.5 17.3 7.48 17.3C6.47 17.3 5.64 18.13 5.64 19.15C5.64 20.17 6.47 21 7.48 21ZM19.01 21C19.05 21 19.11 21 19.15 21C19.64 20.96 20.09 20.74 20.41 20.36C20.74 19.99 20.89 19.52 20.86 19.02C20.79 18.01 19.91 17.23 18.89 17.3C17.87 17.37 17.11 18.27 17.18 19.27C17.25 20.24 18.05 21 19.01 21Z" />
+                  </svg>
+                </button>
+              </li>
+            
+              <li class="week-products__box">
+                <button class="week-products__btn" type="button">
+                  <svg class="week-products__icon" version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 20" width="24" height="20">
+                    <path id="Forma 1"
+                      d="M22.99 6.82C22.91 5.27 22.25 3.81 21.14 2.72C20.02 1.61 18.55 1 17 1C14.69 1 13.05 2.78 12.18 3.74C12.13 3.8 12.07 3.86 12.02 3.91C11.99 3.88 11.96 3.85 11.94 3.82C11.13 2.9 9.46 1 7 1C5.45 1 3.98 1.61 2.86 2.72C1.75 3.81 1.09 5.27 1.01 6.82C0.93 8.36 1.32 9.7 2.28 11.16C3.14 12.47 5.38 14.53 7.04 15.91C8.75 17.32 10.99 19 12.01 19C13.04 19 15.28 17.32 16.97 15.91C18.62 14.54 20.85 12.48 21.72 11.16C22.37 10.17 23.1 8.79 22.99 6.82ZM20.61 10.43C19.98 11.39 18.2 13.17 16.18 14.85C13.78 16.85 12.35 17.64 12.01 17.67C11.67 17.64 10.24 16.84 7.82 14.83C5.79 13.15 4.01 11.38 3.39 10.43C2.59 9.22 2.27 8.13 2.33 6.89C2.47 4.37 4.56 2.32 7 2.32C8.86 2.32 10.21 3.86 10.94 4.69C11.37 5.18 11.6 5.45 12 5.45C12.41 5.45 12.67 5.16 13.15 4.64C13.94 3.77 15.27 2.32 17 2.32C19.44 2.32 21.53 4.37 21.67 6.89C21.74 8.15 21.42 9.2 20.61 10.43Z" />
+                  </svg>
+                </button>
+              </li>
+            </ul>
+
+            <div class="week-products__content">
+              <h3 class="week-products__subtitle">
+                White chair
+              </h3>
+              <span class="week-products__cost">
+                $29.00
+              </span>
+            </div>
+          </li>
+
+          <li class="week-products__item mix category-decor category-lighting category-furnitures">
+            <a data-fancybox="week-products" class="week-products__link" href="#">
+              <img class="week-products__img" src="images/gallery/gallery-8.png" alt="Wooden radio">
+            </a>
+            
+            <ul class="week-products__btns">
+              <li class="week-products__box">
+                <button class="week-products__btn" type="button">
+                  <svg  class="week-products__icon" version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" width="22" height="22">
+                    <path id="Forma 1"
+                      d="M20.45 17.8L15.86 13.21C15.18 14.27 14.27 15.18 13.21 15.86L17.8 20.45C18.53 21.18 19.72 21.18 20.45 20.45C21.18 19.72 21.18 18.53 20.45 17.8ZM16 8.5C16 4.36 12.64 1 8.5 1C4.36 1 1 4.36 1 8.5C1 12.64 4.36 16 8.5 16C12.64 16 16 12.64 16 8.5ZM8.5 14.12C5.4 14.12 2.87 11.6 2.87 8.5C2.87 5.4 5.4 2.87 8.5 2.87C11.6 2.87 14.12 5.4 14.12 8.5C14.12 11.6 11.6 14.12 8.5 14.12ZM4.12 8.5L5.37 8.5C5.37 6.78 6.78 5.37 8.5 5.37L8.5 4.12C6.09 4.12 4.12 6.09 4.12 8.5Z" />
+                  </svg>
+                </button>
+              </li>
+
+              <li class="week-products__box">
+                <button class="week-products__btn" type="button">
+                  <svg class="week-products__icon" version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 22" width="24" height="22">
+                    <path id="Forma 1"
+                      d="M1.81 2.63L4.15 2.63L7.47 14.67C7.57 15.02 7.89 15.26 8.26 15.26L18.47 15.26C18.8 15.26 19.08 15.07 19.22 14.78L22.93 6.22C23.04 5.96 23.02 5.67 22.87 5.44C22.72 5.21 22.46 5.07 22.19 5.07L10.9 5.07C10.45 5.07 10.09 5.44 10.09 5.89C10.09 6.34 10.45 6.71 10.9 6.71L20.94 6.71L17.93 13.63L8.87 13.63L5.54 1.6C5.45 1.24 5.12 1 4.76 1L1.81 1C1.37 1 1 1.37 1 1.81C1 2.26 1.37 2.63 1.81 2.63ZM7.48 21C8.5 21 9.33 20.17 9.33 19.15C9.33 18.13 8.5 17.3 7.48 17.3C6.47 17.3 5.64 18.13 5.64 19.15C5.64 20.17 6.47 21 7.48 21ZM19.01 21C19.05 21 19.11 21 19.15 21C19.64 20.96 20.09 20.74 20.41 20.36C20.74 19.99 20.89 19.52 20.86 19.02C20.79 18.01 19.91 17.23 18.89 17.3C17.87 17.37 17.11 18.27 17.18 19.27C17.25 20.24 18.05 21 19.01 21Z" />
+                  </svg>
+                </button>
+              </li>
+
+              <li class="week-products__box">
+                <button class="week-products__btn" type="button">
+                  <svg class="week-products__icon" version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20" width="24" height="20">
+                    <path id="Forma 1"
+                      d="M22.99 6.82C22.91 5.27 22.25 3.81 21.14 2.72C20.02 1.61 18.55 1 17 1C14.69 1 13.05 2.78 12.18 3.74C12.13 3.8 12.07 3.86 12.02 3.91C11.99 3.88 11.96 3.85 11.94 3.82C11.13 2.9 9.46 1 7 1C5.45 1 3.98 1.61 2.86 2.72C1.75 3.81 1.09 5.27 1.01 6.82C0.93 8.36 1.32 9.7 2.28 11.16C3.14 12.47 5.38 14.53 7.04 15.91C8.75 17.32 10.99 19 12.01 19C13.04 19 15.28 17.32 16.97 15.91C18.62 14.54 20.85 12.48 21.72 11.16C22.37 10.17 23.1 8.79 22.99 6.82ZM20.61 10.43C19.98 11.39 18.2 13.17 16.18 14.85C13.78 16.85 12.35 17.64 12.01 17.67C11.67 17.64 10.24 16.84 7.82 14.83C5.79 13.15 4.01 11.38 3.39 10.43C2.59 9.22 2.27 8.13 2.33 6.89C2.47 4.37 4.56 2.32 7 2.32C8.86 2.32 10.21 3.86 10.94 4.69C11.37 5.18 11.6 5.45 12 5.45C12.41 5.45 12.67 5.16 13.15 4.64C13.94 3.77 15.27 2.32 17 2.32C19.44 2.32 21.53 4.37 21.67 6.89C21.74 8.15 21.42 9.2 20.61 10.43Z" />
+                  </svg>
+                </button>
+              </li>
+            </ul>
+
+            <div class="week-products__content">
+              <h3 class="week-products__subtitle">
+                Retro table
+              </h3>
+              <span class="week-products__cost">
+                $29.00
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
 
   </main>
 
+
+  <footer class="footer">
+    <div class="container">
+      <ul class="footer__inner">
+        <li class="footer__social">
+          <a class="footer__logo logo" href="index.html">
+            <img class="logo__img" src="images/logo.png" alt="logo">
+          </a>
+
+          <ul class="footer__list">
+            <li class="footer__item">
+              <address class="footer__address">
+                ADDRESS: 4772 Wines Lane
+                Houston, TX 77032
+              </address>
+            </li>
+
+            <li class="footer__item">
+              <a class="footer__link" href="tel:8323475843">
+                <span>Telephone</span>: +832-347-5843
+              </a>
+            </li>
+
+            <li class="footer__item">
+              <a class="footer__link" href="email:contact@Glee.com">
+                <span>Email</span>: contact@Glee.com
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="footer__nav">
+          <h2 class="footer__title">
+            Services
+          </h2>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                About us
+              </a>
+            </li>
+
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Return Policy
+              </a>
+            </li>
+
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Our Blog
+              </a>
+            </li>
+
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Contact Us
+              </a>
+            </li>
+
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Terms & Condition
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="footer__user-menu">
+          <h2 class="footer__title">
+            Account
+          </h2>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Your Account
+              </a>
+            </li>
+
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Checkout
+              </a>
+            </li>
+
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Login
+              </a>
+            </li>
+
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Register
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="footer__">
+          <h2 class="footer__title">
+            newsletter
+          </h2>
+          <div class="footer__text">
+            <p>
+              Subscribe by our newsletter and get
+              update protidin.
+            </p>
+          </div>
+          <form  class="footer__form" action="">
+            <input class="footer__input" placeholder="Email address"  type="text">
+            <button class="footer__btn" type="submit">Subscribe</button>
+          </form>
+        </li>
+      </ul>
+      <div class="footer__under">
+        <div class="footer__copurigh">
+          ©2020 CopyRight Example. All rights reserved.
+        </div>
+        <ul class="footer__items">
+          <li class="footer__box">
+            <a class="footer__ref" href="#">
+              Home
+            </a>
+          </li>
+
+          <li class="footer__box">
+            <a class="footer__ref" href="#">
+              About
+            </a>
+          </li>
+
+          <li class="footer__box">
+            <a class="footer__ref" href="#">
+              Blog
+            </a>
+          </li>
+
+          <li class="footer__box">
+            <a class="footer__ref" href="#">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 
   <!-- <script src="js/mixitup.min.js"></script> -->
   <script src="js/main.min.js"></script>

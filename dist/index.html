@@ -7,20 +7,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Glee | Home page</title>
 
-  <!-- <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/slick.css">
-  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/media.css"> -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@700&family=Rubik:wght@400;500&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
+  <script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.26.14'><\/script>".replace("HOST", location.hostname));
+//]]></script>
 
-  <header class="header">
-    <div class="container--large">
-      <a class="header__logo" href="#">
-        <img src="logo.png" alt="logo" class="logo">
+
+  <div class="container--large">
+    <header class="header">
+      <a class="header__logo logo" href="index.html">
+        <img class="logo__img" src="images/logo.png" alt="logo">
       </a>
 
       <nav class="menu">
@@ -59,32 +62,396 @@
       </nav>
 
       <div class="user-nav">
-        <button class="user-nav__btn" type="button">
-          <span class="sr-only">search</span>
+        <button class="user-nav__btn search-btn" type="button">
+          <img class="user-nav__svg user-nav__svg--search" src="images/search.png" alt="search">
         </button>
 
         <div class="user-nav__links">
           <a href="" class="user-nav__link user-nav__link--favorite">
-            <span class="sr-only">favorite product</span>
+            <img class="user-nav__svg user-nav__svg--favorite" src="images/heart.png" alt="your favorite item">
           </a>
           <span class="user-nav__line"></span>
-          <a href="" class="user-nav__link user-nav__link--favorite">
-            <span class="sr-only">favorite product</span>
+          <a href="" class="user-nav__link user-nav__link--cart">
+            <img class="user-nav__svg user-nav__svg--cart" src="images/cart.png" alt="your cart">
+          </a>
+        </div>
+
+        <button class="user-nav__btn menu-btn" type="button">
+          <img class="user-nav__svg user-nav__svg--grid" src="images/grid.png" alt="menu">
+        </button>
+      </div>
+    </header>
+  </div>
+
+  <main>
+
+    <section class="top">
+      <div class="container--large">
+        <ul class="top__slider">
+          <li class="top__item">
+            <div class="container">
+              <div class="top__inner">
+                <div class="top__content">
+                  <h2 class="top__title">
+                    Smart and
+                    trendy
+                  </h2>
+                  <span class="top__text">
+                    Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                  </span>
+                  <a href="" class="top__link link">
+                    Shop Now
+                  </a>
+                </div>
+                <img class="top__img" src="images/sofa.png" alt="sofa">
+              </div>
+            </div>
+          </li>
+
+          <li class="top__item">
+            <div class="container">
+              <div class="top__inner">
+                <div class="top__content">
+                  <h2 class="top__title">
+                    Smart and
+                    trendy
+                  </h2>
+                  <span class="top__text">
+                    Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                  </span>
+                  <a href="" class="top__link">
+                    Shop Now
+                  </a>
+                </div>
+                <img class="top__img" src="images/sofa.png" alt="sofa">
+              </div>
+            </div>
+          </li>
+
+          <li class="top__item">
+            <div class="container">
+              <div class="top__inner">
+                <div class="top__content">
+                  <h2 class="top__title">
+                    Smart and
+                    trendy
+                  </h2>
+                  <span class="top__text">
+                    Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                  </span>
+                  <a href="" class="top__link">
+                    Shop Now
+                  </a>
+                </div>
+                <img class="top__img" src="images/sofa.png" alt="sofa">
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="benefit">
+      <div class="container--large">
+        <ul class="benefit__list">
+          <li class="benefit__item">
+            <img class="benefit__img" src="images/support.png" alt="support 24/7">
+            <div class="benefit__wrapper">
+              <h2 class="benefit__title">
+                Support 24/7.
+              </h2>
+              <span class="benefit__text">
+                Contact us 24 hours a day,
+                7 days a week.
+              </span>
+            </div>
+          </li>
+
+          <li class="benefit__item">
+            <img class="benefit__img" src="images/delivery.png" alt="delivery">
+            <div class="benefit__wrapper">
+              <h2 class="benefit__title">
+                Delivery.
+              </h2>
+              <span class="benefit__text">
+                Free shipping on all US order.
+              </span>
+            </div>
+          </li>
+
+          <li class="benefit__item">
+            <img class="benefit__img" src="images/safety.png" alt="safety">
+            <div class="benefit__wrapper">
+              <h2 class="benefit__title">
+                100% Payment secure.
+              </h2>
+              <span class="benefit__text">
+                We ensure secure payment
+                with PEV.
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="week-products">
+      <h2 class="week-products__title title">
+        Products of the week
+      </h2>
+
+      <div class="container">
+        <ul class="week-products__list product-list">
+          <li class="product-list__item">
+            <button class="product-list__btn" type="button" data-filter="all">
+              All
+            </button>
+          </li>
+          <li class="product-list__item">
+            <button class="product-list__btn" type="button" data-filter=".category-furnitures">
+              Furnitures
+            </button>
+          </li>
+          <li class="product-list__item">
+            <button class="product-list__btn" type="button" data-filter=".category-chairs">
+              Chairs
+            </button>
+          </li>
+          <li class="product-list__item">
+            <button class="product-list__btn" type="button" data-filter=".category-lighting">
+              Lighting
+            </button>
+          </li>
+          <li class="product-list__item">
+            <button class="product-list__btn" type="button" data-filter=".category-decor">
+              Decor
+            </button>
+          </li>
+        </ul>
+
+        <ul class="week-products__items">
+          <li class="week-products__item mix category-pro">
+            <a data-fancybox="week-products" class="week-products__link blackout" href="#">
+              <img class="week-products__img" src="images/week-products/week-products-1.png" alt="Wooden radio">
+            </a>
+            <div class="week-products__content">
+              <h3 class="week-products__subtitle">
+                Wooden radio
+              </h3>
+              <span class="week-products__cost">
+                $29.00
+              </span>
+            </div>
+          </li>
+
+          <li class="week-products__item mix category-pro">
+            <a data-fancybox="week-products" class="week-products__link blackout" href="#">
+              <img class="week-products__img" src="images/week-products/week-products-2.png" alt="Wooden radio">
+            </a>
+            <div class="week-products__content">
+              <h3 class="week-products__subtitle">
+                Wooden chair
+              </h3>
+              <span class="week-products__cost">
+                $29.00
+              </span>
+            </div>
+          </li>
+
+          <li class="week-products__item mix category-pro">
+            <a data-fancybox="week-products" class="week-products__link blackout" href="#">
+              <img class="week-products__img" src="images/week-products/week-products-3.png" alt="Wooden radio">
+            </a>
+            <div class="week-products__content">
+              <h3 class="week-products__subtitle">
+                White chair
+              </h3>
+              <span class="week-products__cost">
+                $29.00
+              </span>
+            </div>
+          </li>
+
+          <li class="week-products__item mix category-pro">
+            <a data-fancybox="week-products" class="week-products__link blackout" href="#">
+              <img class="week-products__img" src="images/week-products/week-products-4.png" alt="Wooden radio">
+            </a>
+            <div class="week-products__content">
+              <h3 class="week-products__subtitle">
+                Retro table
+              </h3>
+              <span class="week-products__cost">
+                $29.00
+              </span>
+            </div>
+          </li>
+
+          <li class="week-products__item mix category-pro">
+            <a data-fancybox="week-products" class="week-products__link blackout" href="#">
+              <img class="week-products__img" src="images/week-products/week-products-5.png" alt="Wooden radio">
+            </a>
+            <div class="week-products__content">
+              <h3 class="week-products__subtitle">
+                Wooden radio
+              </h3>
+              <span class="week-products__cost">
+                $29.00
+              </span>
+            </div>
+          </li>
+
+          <li class="week-products__item mix category-pro">
+            <a data-fancybox="week-products" class="week-products__link blackout" href="#">
+              <img class="week-products__img" src="images/week-products/week-products-6.png" alt="Wooden radio">
+            </a>
+            <div class="week-products__content">
+              <h3 class="week-products__subtitle">
+                Wooden chair
+              </h3>
+              <span class="week-products__cost">
+                $29.00
+              </span>
+            </div>
+          </li>
+
+          <li class="week-products__item mix category-pro">
+            <a data-fancybox="week-products" class="week-products__link blackout" href="#">
+              <img class="week-products__img" src="images/week-products/week-products-7.png" alt="Wooden radio">
+            </a>
+            <div class="week-products__content">
+              <h3 class="week-products__subtitle">
+                White chair
+              </h3>
+              <span class="week-products__cost">
+                $29.00
+              </span>
+            </div>
+          </li>
+
+          <li class="week-products__item mix category-pro">
+            <a data-fancybox="week-products" class="week-products__link blackout" href="#">
+              <img class="week-products__img" src="images/week-products/week-products-8.png" alt="Wooden radio">
+            </a>
+            <div class="week-products__content">
+              <h3 class="week-products__subtitle">
+                Retro table
+              </h3>
+              <span class="week-products__cost">
+                $29.00
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="footer">
+    <div class="container">
+      <ul class="footer__inner">
+        <li class="footer__social">
+          <a class="footer__logo logo" href="index.html">
+            <img class="logo__img" src="images/logo.png" alt="logo">
           </a>
 
-          <button class="user-nav__btn menu-btn" type="button">
-            <span class="sr-only">menu</span>
-          </button>
-        </div>
-      </div>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <address class="footer__address">
+                ADDRESS: 4772 Wines Lane
+                Houston, TX 77032
+              </address>
+            </li>
+
+            <li class="footer__item">
+              <a class="footer__link" href="tel:8323475843">
+              Telephone: +832-347-5843
+              </a>
+            </li>
+
+            <li class="footer__item">
+              <a class="footer__link" href="email:contact@Glee.com">
+              Email: contact@Glee.com
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="footer__nav">
+          <h2 class="footer__title">
+            Services
+          </h2>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                About us
+              </a>
+            </li>
+            
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Return Policy
+              </a>
+            </li>
+            
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Our Blog
+              </a>
+            </li>
+            
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Contact Us
+              </a>
+            </li>
+
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Terms & Condition
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="footer__user-menu">
+          <h2 class="footer__title">
+            Account
+          </h2>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Your Account
+              </a>
+            </li> 
+            
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Checkout
+              </a>
+            </li>
+            
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Login
+              </a>
+            </li>
+            
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Register
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        
+      </ul>
     </div>
-  </header>
+  </footer>
 
-
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/slick.min.js"></script>
-  <script src="js/jquery.fancybox.min.js"></script>
-  <script src="js/mixitup.min.js"></script> -->
+  <!-- <script src="js/mixitup.min.js"></script> -->
   <script src="js/main.min.js"></script>
 </body>
 

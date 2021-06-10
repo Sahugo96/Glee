@@ -62,7 +62,7 @@ function images() {
   .pipe(dest('dist/images'))
 }
 
-function build() {
+function compil() {
   return src([
     'app/**/*.html',
     'app/css/style.min.css',
@@ -89,6 +89,7 @@ exports.browsersync    = browsersync;
 exports.watching       = watching;
 exports.images         = images;
 exports.cleanDist      = cleanDist;
-exports.build          = series(cleanDist, images, build);
+exports.compil         = compil;
+exports.build          = series(cleanDist, images, compil);
 
 exports.default =  parallel(styles, scripts, browsersync, watching);

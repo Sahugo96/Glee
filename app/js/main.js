@@ -1,6 +1,6 @@
 $(function (params) {
 
-  $('.top__slider').slick({
+  $('.top-slider__slider').slick({
     dots: true,
     arrows: false
   });

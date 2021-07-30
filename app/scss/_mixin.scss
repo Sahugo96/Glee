@@ -1,0 +1,12 @@
+@mixin content-clipping($n){
+  display: -webkit-box;
+  -webkit-line-clamp: $n;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin flex-jc-center($jc) {
+  display: flex;
+  justify-content: $jc;
+  align-items: center;
+}

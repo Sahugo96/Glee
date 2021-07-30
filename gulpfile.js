@@ -65,6 +65,7 @@ function images() {
 function compil() {
   return src([
     'app/**/*.html',
+    'app/fonts/*.*',
     'app/css/style.min.css',
     'app/js/main.min.js'
   ], {base: 'app'})

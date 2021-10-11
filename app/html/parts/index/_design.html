@@ -1,0 +1,70 @@
+<section class="design">
+  <div class="container design__container">
+    <h2 class="title design__title">New Design</h2>
+
+    <div class="design__mixfilter" data-ref="design__list">
+      <ul class="mix-filter design__filter">
+        <li class=" mix-filter__item">
+          <button type="button" class="mix-filter__btn" data-filter="all">All</button>
+        </li>
+        <li class="mix-filter__item">
+          <button type="button" class="mix-filter__btn" data-filter=".category-1">Furnitures</button>
+        </li>
+        <li class="mix-filter__item">
+          <button type="button" class="mix-filter__btn" data-filter=".category-2">Chairs</button>
+        </li>
+        <li class="mix-filter__item">
+          <button type="button" class="mix-filter__btn" data-filter=".category-3">Lighting</button>
+        </li>
+        <li class="mix-filter__item">
+          <button type="button" class="mix-filter__btn" data-filter=".category-4">Decor</button>
+        </li>
+      </ul>
+
+      <ul class="design__list">
+
+        <li class="design__item mix category-1">
+            @@include('../cards/_design-card.html', 
+              {"name": "Beat Flat Pendant Black",
+              "photo": "1"
+            })
+        </li>
+
+        <li class="design__item mix category-2">
+            @@include('../cards/_design-card.html',
+              {"name": "Lampe Sur Pieds Bamboo",
+              "photo": "2"
+            })
+        </li>
+
+        <li class="design__item mix category-3">
+            @@include('../cards/_design-card.html',
+              {"name": "Rattan Rocking Chair",
+              "photo": "3"
+            })  
+        </li>
+
+        <li class="design__item mix category-3">
+          @@include('../cards/_design-card.html',
+              {"name": "Rattan Rocking Chair",
+              "photo": "4"
+          })
+        </li>
+
+        <li class="design__item mix category-4">
+            @@include('../cards/_design-card.html',
+              {"name": "Rattan Rocking Chair",
+              "photo": "5"
+            })
+        </li>
+
+        <li class="design__item mix category-4">
+            @@include('../cards/_design-card.html',
+              {"name": "Lampe Sur Pieds Bamboo",
+              "photo": "6"
+            })
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

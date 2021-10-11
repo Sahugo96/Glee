@@ -1,0 +1,105 @@
+.support {
+  &__inner {
+    background-color: $bg-light;
+  }
+
+  &__list {
+    display: flex;
+
+    @include _768 {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding-top: 45px;
+    padding-left: 15px;
+    align-items: center;
+    max-width: 590px;
+    width: 100%;
+    min-height: 170px;
+    position: relative;
+    border-right: 1px solid #e8e4df;
+
+    @include _768 {
+      border-right: none;
+      border-bottom: 1px solid #e8e4df;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      min-height: 0;
+      flex-direction: row;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding-left: 80px;
+
+    &:before {
+      content: '';
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      left: 0;
+      top: 6px;
+      background-repeat: no-repeat;
+    }
+
+    &--support {
+      &:before {
+        background-image: url(../../sprite/sprite.svg#icons--support-24);
+      }
+    }
+
+    &--delivery {
+      &:before {
+        top: 18px;
+        background-image: url(../../sprite/sprite.svg#icons--delivery-truck);
+      }
+    }
+
+    &--payment {
+      &:before {
+        background-image: url(../../sprite/sprite.svg#icons--credit-card);
+      }
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 2.1;
+    color: #414141;
+    max-width: 200px;
+    max-height: 140px;
+    @include line-camp;
+    -webkit-line-clamp: 2;
+
+    @include _1024 {
+      font-size: 15px;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.9;
+    color: #585858;
+    max-width: 235px;
+    width: 100%;
+    max-height: 70px;
+    @include line-camp;
+    -webkit-line-clamp: 2;
+
+    @include _768 {
+      max-width: 100%;
+    }
+  }
+}

@@ -1,0 +1,409 @@
+.product-details {
+  padding: 120px 0 107px;
+  @extend %Rubik-400;
+
+  @include _768 {
+    padding: 30px 0;
+  }
+
+  &__box {
+    display: flex;
+    margin-bottom: 96px;
+
+    @include _1024 {
+      display: block;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__slide {
+    margin-right: 50px;
+
+    @include _1024 {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__content {
+    max-width: 570px;
+    width: 100%;
+    padding: 22px 20px 30px 17px;
+
+    @include _1024 {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 40px;
+    color: $black;
+    @extend %Rubik-400;
+    margin-bottom: 9px;
+    @include line-camp;
+
+    @include _768 {
+      font-size: 34px;
+    }
+  }
+
+  &__star {
+    margin-bottom: 29px;
+  }
+
+  &__price {
+    display: block;
+    font-size: 30px;
+    line-height: 1.5;
+    color: $black;
+    margin-bottom: 25px;
+    @include line-camp;
+  }
+
+  &__text {
+    color: $main-dark;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    @include line-camp;
+    -webkit-line-clamp: 5;
+  }
+
+  &__form {
+    margin-bottom: 51px;
+  }
+}
+
+.product-slide {
+  display: flex;
+  max-width: 550px;
+  width: 100%;
+
+  @include _1024 {
+    max-width: 100%;
+  }
+
+  &__thumb {
+    width: 138px;
+    height: 530px;
+    margin-right: 25px;
+
+    @include _1024 {
+      display: none;
+    }
+  }
+
+  &__thumb-item {
+    border: 1px solid #f2f2f2;
+    margin-bottom: 13px;
+    width: 138px;
+    height: 160px;
+    cursor: pointer;
+  }
+
+  &__thumb-img {
+    width: 138px;
+    height: 160px;
+    object-fit: cover;
+  }
+
+  &__big {
+    max-width: 387px;
+    height: 530px;
+    border: 1px solid #f2f2f2;
+
+    @include _1024 {
+      max-width: 100%;
+    }
+
+    @include _768 {
+      height: 350px;
+    }
+  }
+
+  &__big-item {
+    width: 387px;
+    height: 530px;
+
+    @include _1024 {
+      width: 100%;
+    }
+
+    @include _768 {
+      height: 350px;
+    }
+  }
+
+  &__big-img {
+    width: 387px;
+    height: 530px;
+    object-fit: cover;
+
+    @include _1024 {
+      width: auto;
+      margin: 0 auto;
+    }
+
+    @include _768 {
+      height: 350px;
+    }
+  }
+}
+
+.form-num {
+  &__btn {
+    text-transform: uppercase;
+    transform: translateY(-2px);
+    padding: 16px 56px;
+    max-width: 210px;
+    max-height: 55px;
+
+    @include _1440 {
+      padding: 16px 46px;
+    }
+
+    @include _576 {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+
+  &__input {
+    outline: transparent;
+    margin-right: 14px;
+  }
+}
+
+.jq-number {
+  padding: 0;
+  position: relative;
+
+  &__field {
+    width: 148px;
+    border: 1px solid $main-light;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 48px;
+      width: 1px;
+      height: 53px;
+      background-color: $main-light;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 48px;
+      width: 1px;
+      height: 53px;
+      background-color: $main-light;
+    }
+
+    input {
+      width: 100%;
+      height: 53px;
+      @extend %Rubik-400;
+      border: none;
+      font-size: 15px;
+      color: $black;
+      text-align: center;
+    }
+  }
+
+  &__spin {
+    position: absolute;
+    cursor: pointer;
+    width: 52px;
+    height: 52px;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    &.plus {
+      right: 0;
+      
+      &:before {
+        content: '';
+        position: absolute;
+        top: 22px;
+        left: 26px;
+        width: 1px;
+        height: 8px;
+        background-color: $black;
+      }
+    }
+    
+    &.minus {
+      left: 0;
+    }
+      
+    &:after {
+      content: '';
+      position: absolute;
+      top: 25px;
+      left: 23px;
+      width: 8px;
+      height: 1px;
+      background-color: $black;
+    }
+  }
+}
+
+.product-info {
+  &__item {
+    display: flex;
+  }
+
+  &__title,
+  &__link {
+    font-size: 16px;
+    color: $main-dark;
+    line-height: 1.9;
+    @extend %Rubik-400;
+    max-width: 300px;
+    overflow: hidden;
+    @include line-camp;
+    flex-direction: row;
+  }
+
+  &__link {
+    @extend %link-style;
+    margin-left: 10px;
+  }
+}
+
+.product-tabs {
+  @extend %Rubik-400;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    max-width: 760px;
+    width: 100%;
+    margin-left: 166px;
+    margin-bottom: 31px;
+
+    @include _1024 {
+      margin: 0 auto 31px;
+      display: block;
+    }
+  }
+
+  &__link {
+    width: 242px;
+    margin-right: 9px;
+    background-color: $sky;
+    color: $main-dark;
+    font-size: 18px;
+    line-height: 2.1;
+    padding: 7px;
+    @include line-camp;
+
+    @include _1024 {
+      margin-bottom: 30px;
+      width: 100%;
+    }
+
+    &--active {
+      color: #ffffff;
+      background-color: $main-light;
+    }
+  }
+
+  &__item {
+    display: none;
+    line-height: 1.9;
+    @extend %Rubik-400;
+    font-size: 16px;
+
+    &--active {
+      display: block;
+      @include line-camp;
+      -webkit-line-clamp: 3;
+    }
+  }
+}
+
+.related {
+  margin-bottom: 67px;
+
+  &__container {
+    max-width: 1290px;
+  }
+
+  &__title {
+    margin-bottom: 35px;
+    margin-left: 30px;
+    text-align: left;
+
+    @include _768 {
+      margin-bottom: 64px;
+      margin-left: 0;
+    }
+  }
+
+  &__slider {
+    display: flex;
+    justify-content: space-between;
+
+    @include _768 {
+      justify-content: center;
+    }
+
+    .slick-prev,
+    .slick-next {
+      position: absolute;
+      top: -82px;
+      background-color: transparent;
+      border: 1px solid $sky;
+      border-radius: 3px;
+      padding: 16px 16px;
+      outline: transparent;
+      transition: background-color 0.3s, box-shadow 0.3s;
+
+      @include _768 {
+        top: -50px;
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 3px lightskyblue;
+      }
+
+      &:hover {
+        background-color: #c2d1d8;
+      }
+
+      &:active {
+        background-color: $main-dark
+      }
+
+      svg {
+        fill: $main-light;
+        display: inherit;
+      }
+    }
+
+    .slick-prev {
+      right: 100px;
+    }
+
+    .slick-next {
+      right: 30px;
+    }
+
+    .slick-disabled {
+      border-color: $main-light;
+    }
+  }
+
+  &__item {
+    margin: 31px 30px 42px;
+
+    @include _576 {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+}

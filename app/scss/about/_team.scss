@@ -1,0 +1,127 @@
+.team {
+  padding: 60px 0;
+  margin-bottom: 115px;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__about {
+    max-width: 305px;
+    margin-right: 95px;
+
+    @include _1440 {
+      max-width: 100%;
+      margin-bottom: 30px;
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 36px;
+    @include line-camp;
+  }
+
+  &__text {
+    line-height: 1.9;
+    @extend %Rubik-400;
+    margin-bottom: 35px;
+    @include line-camp;
+    -webkit-line-clamp: 18;
+
+    @include _768 {
+      text-align: left;
+    }
+  }
+
+  &__btn {
+    width: 170px;
+    padding: 14px 25px;
+    border-radius: 5px;
+    @extend %poppins-700;
+    font-size: 15px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 100px;
+
+    @include _1440 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__img {
+    object-fit: cover;
+    z-index: -1;
+    height: 321px;
+    max-width: 370px;
+    width: 100%;
+  }
+
+  &__info {
+    position: absolute;
+    bottom: -66px;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 20px;
+    background-color: #fff;
+    max-width: 325px;
+    width: 100%;
+    box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+
+    @include _576 {
+      max-width: 290px;
+    }
+  }
+
+  &__name {
+    font-size: 22px;
+    line-height: 1.2;
+    color: $main-dark;
+    margin-bottom: 10px;
+    @include line-camp;
+    -webkit-line-clamp: 2;
+  }
+
+  &__prof {
+    line-height: 1.9;
+    color: #565872;
+    @extend %Rubik-400;
+    @include line-camp;
+    color: #565872;
+    -webkit-line-clamp: 2;
+  }
+
+  &__social {
+    display: flex;
+
+    .circle-btn {
+      margin-right: 5px;
+      width: 40px;
+      height: 40px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}

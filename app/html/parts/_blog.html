@@ -1,0 +1,100 @@
+<section class="blog">
+  <div class="container">
+    <div class="blog__inner">
+      <div class="blog__content">
+        <ul class="blog__list">
+          <li class="blog__item">
+            @@include('_blog-page.html',
+            {"photo": "1",
+            "title": "Fonsectetur adipisicing eiusmod",
+            "link": "a",
+            "href": "blog-one.html"
+            })
+          </li>
+
+          <li class="blog__item">
+            @@include('_blog-page.html',
+            {"photo": "2",
+            "title": "Fonsectetur adipisicing elit,",
+            "link": "a",
+            "href": "blog-one.html"
+            })
+          </li>
+
+          <li class="blog__item">
+            @@include('_blog-page.html',
+            {"photo": "3",
+            "title": "Fsectetur adipisicing tempor incididunt",
+            "link": "a",
+            "href": "blog-one.html"
+            })
+          </li>
+
+          <li class="blog__item">
+            @@include('_blog-page.html',
+            {"photo": "4",
+            "title": "vonsectetur adipisicing elit",
+            "link": "a",
+            "href": "blog-one.html"
+            })
+          </li>
+        </ul>
+
+        @@include('components/_pagination.html',
+        {"class": "blog__pagination",
+        })
+      </div>
+
+      <ul class="blog-aside">
+        <li class="blog-aside__item">
+          @@include('filters/_search.html')
+        </li>
+
+        <li class="blog-aside__item">
+          @@include('filters/_category.html')
+        </li>
+
+        <li class="blog-aside__item">
+          <div class="recent">
+            <button class="filter-title" type="button">
+              recent posts
+            </button>
+            <ul class="recent__list product-filter">
+              <li class="recent__item">
+                @@include('cards/_recent-content.html',
+                {"class": "recent-content--blog",
+                "photo": "images/blog/recent/1.jpg",
+                "title": "Corem ipsum dolor tetur adipisicing elit"
+                })
+              </li>
+
+              <li class="recent__item">
+                @@include('cards/_recent-content.html',
+                {"class": "recent-content--blog",
+                "photo": "images/blog/recent/2.jpg",
+                "title": "Fdipisicing elit, sed do eiusmod tempor"
+                })
+              </li>
+
+              <li class="recent__item">
+                @@include('cards/_recent-content.html',
+                {"class": "recent-content--blog",
+                "photo": "images/blog/recent/3.jpg",
+                "title": "Eonsectetur adipisicing elit, sed do eiusmod"
+                })
+              </li>
+
+              <li class="recent__item">
+                @@include('cards/_recent-content.html',
+                {"class": "recent-content--blog",
+                "photo": "images/blog/recent/4.jpg",
+                "title": "gnim ad minim veniam, quis nostrud"
+                })
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

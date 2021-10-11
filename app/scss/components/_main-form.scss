@@ -1,0 +1,148 @@
+.main-form {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 830px;
+
+  &--contact {
+    max-width: 620px;
+
+    .main-form__label {
+      margin-right: 20px;
+
+      @include _1024 {
+        margin-right: 0;
+      }
+
+      &--comment {
+        margin-right: 0;
+      }
+    }
+
+    .main-form__input {
+      min-width: 300px;
+
+      &::placeholder {
+        text-transform: uppercase;
+      }
+    }
+
+    .main-form__textarea {
+      height: 170px;
+
+      &::placeholder {
+        text-transform: uppercase;
+      }
+    }
+
+    .main-form__btn {
+      padding: 9px 43px;
+      max-width: 620px;
+    }
+
+    .main-form__label:after {
+      right: 27px;
+    }
+  }
+
+  &__box {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  &__label {
+    position: relative;
+    margin-right: 30px;
+
+    @include _1024 {
+      width: 100%;
+      margin-bottom: 30px;
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 13px;
+      height: 14px;
+      background-repeat: no-repeat;
+      right: 21px;
+      top: 15px;
+    }
+
+    &--name {
+      &:after {
+        background-image: url(../../sprite/sprite.svg#icons--user--blue);
+      }
+    }
+
+    &--email {
+      &:after {
+        width: 19px;
+        height: 19px;
+        background-image: url(../../sprite/sprite.svg#icons--email);
+      }
+    }
+
+    &--comment {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 28px;
+
+      &:after {
+        width: 19px;
+        height: 19px;
+        background-image: url(../../sprite/sprite.svg#icons--comment);
+      }
+    }
+  }
+
+  &__input,
+  &__textarea {
+    padding: 9px 50px 9px 18px;
+    color: #999999;
+    border: 1px solid #e5e5e5;
+    outline: transparent;
+    transition: border-color 0.3s, background-color 0.3s;
+
+    &:focus {
+      border-color: $main-light;
+      color: #333333;
+    }
+
+    &:hover {
+      background-color: $sky;
+    }
+
+    &:active {
+      background-color: $main-dark;
+    }
+  }
+
+  &__input {
+    height: 50px;
+    min-width: 400px;
+    width: 100%;
+    @extend %Rubik-400;
+
+    @include _576 {
+      min-width: auto;
+    }
+  }
+
+  &__textarea {
+    width: 100%;
+    height: 120px;
+    resize: none;
+
+    &::placeholder {
+      @extend %Rubik-400;
+      color: #999999;
+    }
+  }
+}

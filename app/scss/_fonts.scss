@@ -1,62 +1,72 @@
 @font-face {
-  font-family: 'Rubik-Regular', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  src: local('Rubik-Regular'),
-       url(../fonts/Rubik-Regular.woff2) format('woff2');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Rubik-Medium', sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  src: local('Rubik-Medium'),
-       url(../fonts/Rubik-Medium.woff2) format('woff2');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'DMSans-Regular', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  src: local('DMSans-Regular'),
-       url(../fonts/DMSans-Regular.woff2) format('woff2');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'DMSans-Medium', sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  src: local('DMSans-Medium'),
-       url(../fonts/DMSans-Medium.woff2) format('woff2');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'DMSans-Bold', sans-serif;
+  font-family: 'DM Sans';
   font-weight: 700;
   font-style: normal;
-  src: local('DMSans-Bold'),
-       url(../fonts/DMSans-Bold.woff2) format('woff2');
+  src:
+    url('../fonts/DMSans-Bold.woff') format('woff');
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Poppins-Bold', sans-serif;
-  font-weight: 700;
+  font-family: 'DM Sans';
+  font-weight: 500;
   font-style: normal;
-  src: local('Poppins-Bold'),
-       url(../fonts/Poppins-Bold.woff2) format('woff2');
+  src:
+    url('../fonts/DMSans-Medium.woff') format('woff');
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'MyriadPro-Regular', sans-serif;
+  font-family: 'DM Sans';
   font-weight: 400;
   font-style: normal;
-  src: local('MyriadPro-Regular'),
-       url(../fonts/MyriadPro-Regular.woff2) format('woff2');
+  src:
+  url('../fonts/DMSans-Regular.woff') format('woff');
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Rubik';
+  font-weight: 700;
+  font-style: normal;
+  src:
+    url('../fonts/Rubik-Bold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-weight: 500;
+  font-style: normal;
+  src:
+    url('../fonts/Rubik-Medium.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-style: normal;
+  src:
+    url('../fonts/Rubik-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-weight: 300;
+  font-style: normal;
+  src:
+    url('../fonts/Rubik-Light.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-style: normal;
+  src: 
+    url('../fonts/Poppins-SemiBold.woff') format('woff');
+  font-display: swap;
+}
+

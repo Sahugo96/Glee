@@ -1,0 +1,46 @@
+.pagination {
+  @extend %Rubik-400;
+  display: flex;
+  justify-content: center;
+
+  &--list {
+    justify-content: flex-start;
+
+    @include _1440 {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    margin-right: 15px;
+  }
+
+  &__link {
+    padding: 10px 20px;
+    border: 1px solid $main-light;
+    color: $main-dark;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: transparent;
+    transition: color 0.3s, background-color 0.3s;
+
+    &:focus {
+      border-color: $main-dark;
+    }
+
+    &:hover {
+      background-color: #edf1f4;
+    }
+
+    &:active {
+      background-color: $main-dark;
+      color: #ffffff;
+    }
+
+    &--active {
+      background-color: $main-light;
+      color: #ffffff;
+    }
+  }
+}

@@ -1,0 +1,197 @@
+<section class="blog-one">
+  <div class="container">
+    <div class="blog-one__inner">
+      <div class="blog-one__content">
+        <div class="blog-one__item">
+          @@include('_blog-page.html',
+          {"photo": "1",
+          "title": "Fonsectetur adipisicing eiusmod",
+          "class": "blog-page--page",
+          "linktitle": "div",
+          "link": "div"
+          })
+        </div>
+
+        <div class="blog-one__box">
+          <div class="blog-one__author">
+            <img class="blog-one__img" src="images/team/3.jpg" alt="avatar">
+
+            <div class="blog-one__author-info">
+              <h4 class="blog-one__name">Mark N. Hernandez</h4>
+              <span class="blog-one__prof">Designer</span>
+            </div>
+          </div>
+
+          <div class="blog-one__social">
+            <div class="blog-one__tags">
+              <span class="blog-one__tags-title">Tags:</span>
+              <span class="blog-one__tags-text">All, Trending</span>
+            </div>
+            <div class="blog-one__tags">
+              <span class="blog-one__tags-title">Share:</span>
+              <ul class="blog-one__social-list">
+                <li class="blog-one__social-item">
+                  <a class="social-link" href="#">
+                    <svg>
+                      <use xlink:href='sprite/sprite.svg#icons--facebook'></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="blog-one__social-item">
+                  <a class="social-link" href="#">
+                    <svg>
+                      <use xlink:href='sprite/sprite.svg#icons--twitter'></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="blog-one__social-item">
+                  <a class="social-link" href="#">
+                    <svg>
+                      <use xlink:href='sprite/sprite.svg#icons--inst'></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="blog-one__social-item">
+                  <a class="social-link" href="#">
+                    <svg>
+                      <use xlink:href='sprite/sprite.svg#icons--google+'></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="comments blog-one__comments">
+          <div class="comments__title">
+            <span class="comments__num">3</span>
+            Comments
+          </div>
+          <ul class="comments__list">
+            <li class="comments__item">
+              <div class="comments__box">
+                <img class="comments__photo" src="images/comments/1.jpg" alt="avatar">
+
+                <div class="comments__info">
+                  <div class="comments__top">
+                    <span class="comments__name">Delores G. Roberts</span>
+                    <time class="comments__date">Add 11 Oct 2020</time>
+                  </div>
+                  <p class="comments__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique
+                    convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                    himenaeos.
+                    Suspendisse orci sem, ultrices
+                  </p>
+                  <a class="comments__reply" href="#">Reply</a>
+                </div>
+              </div>
+
+              <ul class="comments__answers">
+                <li class="comments__item comments__answer">
+                  <img class="comments__photo" src="images/comments/2.jpg" alt="avatar">
+
+                  <div class="comments__info">
+                    <div class="comments__top">
+                      <span class="comments__name">Shannon S. Williams</span>
+                      <time class="comments__date">Add 11 Oct 2020</time>
+                    </div>
+                    <p class="comments__text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique
+                      convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra
+                    </p>
+                    <a class="comments__reply" href="#">Reply</a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li class="comments__item">
+              <div class="comments__box">
+                <img class="comments__photo" src="images/comments/3.jpg" alt="avatar">
+
+                <div class="comments__info">
+                  <div class="comments__top">
+                    <span class="comments__name">Nicholas R. Coley</span>
+                    <time class="comments__date">Add 11 Oct 2020</time>
+                  </div>
+                  <p class="comments__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique
+                    convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                    himenaeos.
+                    Suspendisse orci sem,
+                  </p>
+                  <a class="comments__reply" href="#">Reply</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="comments-leave">
+          <span class="comments-leave__title">Leave A Comment</span>
+          @@include('components/_main-form.html',
+          {"button": "post comment",
+          "email": "youremail@gmail.com",
+          "textarea": "comment"
+          })
+        </div>
+      </div>
+
+      <ul class="blog-aside">
+        <li class="blog-aside__item">
+          @@include('filters/_search.html')
+        </li>
+
+        <li class="blog-aside__item">
+          @@include('filters/_category.html')
+        </li>
+
+        <li class="blog-aside__item">
+          <div class="recent">
+            <button class="filter-title" type="button">
+              recent posts
+            </button>
+            <ul class="recent__list product-filter">
+              <li class="recent__item">
+                @@include('cards/_recent-content.html',
+                {"class": "recent-content--blog",
+                "photo": "images/blog/recent/1.jpg",
+                "title": "Corem ipsum dolor tetur adipisicing elit"
+                })
+              </li>
+
+              <li class="recent__item">
+                @@include('cards/_recent-content.html',
+                {"class": "recent-content--blog",
+                "photo": "images/blog/recent/2.jpg",
+                "title": "Fdipisicing elit, sed do eiusmod tempor"
+                })
+              </li>
+
+              <li class="recent__item">
+                @@include('cards/_recent-content.html',
+                {"class": "recent-content--blog",
+                "photo": "images/blog/recent/3.jpg",
+                "title": "Eonsectetur adipisicing elit, sed do eiusmod"
+                })
+              </li>
+
+              <li class="recent__item">
+                @@include('cards/_recent-content.html',
+                {"class": "recent-content--blog",
+                "photo": "images/blog/recent/4.jpg",
+                "title": "gnim ad minim veniam, quis nostrud"
+                })
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

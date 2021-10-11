@@ -1,0 +1,243 @@
+.about {
+  padding: 122px 0 60px 0;
+
+  @include _1024 {
+    padding: 30px 0 30px 0;
+  }
+
+  &__inner {
+    display: flex;
+    margin-bottom: 120px;
+
+    @include _1024 {
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__img {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 570px;
+    width: 100%;
+    max-height: 676px;
+
+    @include _1024 {
+      display: none;
+    }
+  }
+
+  &__content {
+    max-width: 600px;
+    padding: 30px 0 80px 45px;
+    color: $main-dark;
+
+    @include _768 {
+      padding: 0;
+    }
+  }
+
+  &__experience {
+    display: flex;
+    align-items: center;
+  }
+
+  &__year {
+    font-size: 140px;
+    @extend %Rubik-700;
+    color: $main-light;
+    margin-right: 30px;
+    line-height: 1.4;
+    @include line-camp;
+    max-width: 160px;
+
+    @include _768 {
+      font-size: 70px;
+    }
+  }
+
+  &__year-text {
+    @include line-camp;
+    -webkit-line-clamp: 3;
+    width: 100px;
+    @extend %Rubik-400;
+    font-size: 16px;
+    line-height: 1.9;
+  }
+
+  &__subtitle {
+    margin-bottom: 25px;
+    font-size: 36px;
+    @include line-camp;
+    -webkit-line-clamp: 2;
+
+    @include _768 {
+      margin-bottom: 10px;
+      font-size: 30px;
+    }
+  }
+
+  &__text {
+    width: 100px;
+    @extend %Rubik-400;
+    font-size: 16px;
+    line-height: 1.9;
+    width: 100%;
+    padding-bottom: 60px;
+    margin-bottom: 61px;
+    max-height: 150px;
+    border-bottom: 1px solid #e6eaf0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @include _768 {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.glee-project {
+  display: flex;
+
+  @include _768 {
+    justify-content: center;
+  }
+
+  @include _576 {
+    flex-wrap: wrap;
+    margin-left: 50px;
+  }
+
+  &__item {
+    padding-left: 63px;
+    margin-right: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @include _576 {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 44px;
+      height: 42px;
+      top: 23px;
+      left: 0px;
+      background-repeat: no-repeat;
+
+      @include _768 {
+        top: 7px;
+        left: 11px;
+      }
+    }
+
+    &--projects::before {
+      background-image: url('../../images/icons/about-projects.png');
+    }
+
+    &--revenue::before {
+      background-image: url('../../images/icons/about-revenue.png');
+    }
+
+    &--awards::before {
+      background-image: url('../../images/icons/about-awards.png');
+    }
+  }
+
+  &__num {
+    font-size: 36px;
+
+    @include _768 {
+      font-size: 24px;
+    }
+  }
+
+  &__num,
+  &__text {
+    @include line-camp;
+    max-width: 90px;
+  }
+
+  &__text {
+    @include _768 {
+      font-size: 14px;
+    }
+  }
+}
+
+.glee-rate {
+  min-height: 320px;
+  background-color: $bg-dark;
+  padding: 50px 0 75px 0;
+  color: $main-dark;
+  text-align: center;
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+
+    @include _768 {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    padding: 100px 10px 0 10px;
+    position: relative;
+
+    @include _576 {
+      margin-bottom: 20px;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 70px;
+      height: 75px;
+      bottom: 85px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-repeat: no-repeat;
+    }
+
+    &--rate::before {
+      background-image: url(../../sprite/sprite.svg#icons--about-rate);
+    }
+
+    &--delivery::before {
+      background-image: url(../../sprite/sprite.svg#icons--about-delivery);
+    }
+
+    &--time::before {
+      background-image: url(../../sprite/sprite.svg#icons--about-time);
+    }
+
+    &--brands::before {
+      background-image: url(../../sprite/sprite.svg#icons--about-brands);
+    }
+  }
+
+  &__num {
+    display: block;
+    font-size: 36px;
+    max-width: 210px;
+    @include line-camp;
+  }
+
+  &__text {
+    display: block;
+    font-size: 18px;
+    line-height: 1.9;
+    max-width: 210px;
+    @include line-camp;
+  }
+}

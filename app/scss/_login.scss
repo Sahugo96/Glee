@@ -1,0 +1,149 @@
+.login {
+  padding: 120px 0;
+
+  @include _768 {
+    padding: 30px 0;
+  }
+}
+
+.login-form {
+  max-width: 470px;
+  width: 100%;
+  margin: 0 auto;
+  @extend %Rubik-400;
+  font-size: 14px;
+  color: $main-light;
+
+  &__text {
+    display: block;
+    margin-bottom: 10px;
+    @include line-camp;
+
+    &--remember {
+      padding-left: 25px;
+    }
+
+    &--password {
+      @extend %Rubik-400;
+      font-size: 14px;
+      color: $main-light;
+      @extend %link-style;
+      max-width: 200px;
+    }
+
+    &--notregister {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
+
+  &__label {
+    margin-bottom: 21px;
+    display: block;
+    cursor: auto;
+
+    &--password {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    height: 60px;
+    border: 1px solid #f6f6f6;
+    padding: 10px;
+    outline: transparent;
+    transition: border-color 0.3s,background-color 0.3s;
+
+    &:focus {
+      border-color: $main-light;
+      color: #333333;
+    }
+
+    &:hover {
+      background-color: $sky;
+    }
+
+    &:active {
+      background-color: $main-dark;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    height: 60px;
+    @extend %Rubik-500;
+    font-size: 18px;
+    @include line-camp;
+  }
+
+  &__lost {
+    padding: 30px 0 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #f6f6f6;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__remember {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    max-width: 200px;
+  }
+
+  &__checkbox {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+
+    &:checked + .login-form__box {
+      background-image: url(../../sprite/sprite.svg#icons--checked);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &__box {
+    width: 14px;
+    height: 14px;
+    border-radius: 1px;
+    top: 5px;
+    background-color: #ebebeb;
+    position: absolute;
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    height: 60px;
+    padding: 14px 10px;
+    height: 60px;
+    border: 1px solid $main-light;
+    text-align: center;
+    vertical-align: middle;
+    @extend %Rubik-500;
+    font-size: 18px;
+    color: $main-dark;
+    outline: transparent;
+    transition: background-color 0.3s,
+    box-shadow 0.3s;
+    @include line-camp;
+
+    &:focus {
+      box-shadow: 0 0 0 3px lightskyblue;
+    }
+
+    &:hover {
+      background-color: #c2d1d8;
+    }
+
+    &:active {
+      background-color: $main-dark;
+      color: #ffffff;
+    }
+  }
+}

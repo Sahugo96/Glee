@@ -1,0 +1,126 @@
+.product-list {
+  padding: 115px 0;
+
+  @include _600 {
+    padding: 50px 0;
+  }
+
+  &__inner {
+    display: flex;
+
+    @include _1024 {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__filters {
+    width: 270px;
+    margin-right: 30px;
+
+    @include _1024 {
+      min-width: 100%;
+    }
+  }
+
+  &__pagination {
+    padding-top: 77px;
+
+    &--list {
+      padding-top: 41px;
+    }
+  }
+}
+
+.product-filters {
+  @extend %Rubik-400;
+  color: $main-dark;
+
+  &__item {
+    width: 270px;
+    margin-bottom: 60px;
+
+    @include _1024 {
+      width: 100%;
+    }
+
+    &--price {
+      margin-bottom: 53px;
+    }
+
+    &--brand {
+      margin-bottom: 74px;
+    }
+
+    &--recent {
+      margin-bottom: 48px;
+    }
+  }
+}
+
+.product-content {
+  &__buttons {
+    margin-top: -40px;
+    margin-bottom: 16px;
+  }
+
+  &__button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    margin-right: 15px;
+    border: 1px solid transparent;
+    outline: transparent;
+
+    @include _1024 {
+      margin-right: 30px;
+    }
+
+    &:focus {
+      border: 1px solid #000;
+    }
+
+    &:hover {
+      background-color: $sky;
+    }
+
+    &:active {
+      background-color: #ddf3ff;
+    }
+
+    &--active {
+      .product-content__svg {
+        fill: $main-dark;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__svg {
+    width: 44px;
+    height: 44px;
+    fill: $main-light;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 70px;
+
+    @include _1440 {
+      justify-content: space-around;
+    }
+  }
+
+  &__item {
+    margin-bottom: 40px;
+
+    &--list {
+      width: 100%;
+      min-height: 500px;
+    }
+  }
+}

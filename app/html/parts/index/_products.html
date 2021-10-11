@@ -1,0 +1,104 @@
+<section class="products">
+  <div class="container">
+    <h2 class="title products__title">Products of the week</h2>
+
+    <div class="products__mix-filter" data-ref="products__list">
+      <ul class="mix-filter products__filter">
+        <li class="mix-filter__item">
+          <button type="button" class="mix-filter__btn" data-filter="all">All</button>
+        </li>
+        <li class="mix-filter__item">
+          <button type="button" class="mix-filter__btn" data-filter=".category-a">Furnitures</button>
+        </li>
+        <li class="mix-filter__item">
+          <button type="button" class="mix-filter__btn" data-filter=".category-b">Chairs</button>
+        </li>
+        <li class="mix-filter__item">
+          <button type="button" class="mix-filter__btn" data-filter=".category-c">Lighting</button>
+        </li>
+        <li class="mix-filter__item">
+          <button type="button" class="mix-filter__btn" data-filter=".category-d">Decor</button>
+        </li>
+      </ul>
+
+      <div class="container products__container">
+        <ul class="products__list">
+          <li class="products__box mix category-a">
+            @@include('../cards/_product-card.html', 
+              {"name": "Wooden radio",
+              "photo": "1"
+            })
+          </li>
+
+          <li class="products__box  mix category-a">
+            @@include('../cards/_product-card.html', 
+              {"name": "Wooden chair",
+              "photo": "2"
+            })
+          </li>
+
+          <li class="products__box mix category-b">
+            @@include('../cards/_product-card.html', 
+              {"name": "White chair",
+              "photo": "3"
+            })
+          </li>
+
+          <li class="products__box mix category-c">
+            @@include('../cards/_product-card.html', 
+              {"name": "White chair",
+              "photo": "4"
+            })
+          </li>
+
+          <li class="products__box mix category-c">
+            @@include('../cards/_product-card.html', 
+              {"name": "Whooden radio",
+              "photo": "5"
+            })
+          </li>
+
+          <li class="products__box mix category-d">
+            @@include('../cards/_product-card.html', 
+              {"name": "Wooden chair",
+              "photo": "6"
+            })
+          </li>
+
+          <li class="products__box mix category-d">
+            @@include('../cards/_product-card.html', 
+              {"name": "White chair",
+              "photo": "7"
+            })
+          </li>
+
+          <li class="products__box mix category-d">
+            @@include('../cards/_product-card.html', 
+              {"name": "Retro table",
+              "photo": "8"
+            })
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="products-furniture">
+    <div class="container container--big">
+      <ul class="products-furniture__list">
+        <li class="products-furniture__item">
+          @@include('../cards/_product-lamp.html',
+              {"photo": "9"
+            })
+        </li>
+
+        <li class="products-furniture__item">
+          @@include('../cards/_product-lamp.html',
+              {"photo": "10"
+            })
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</section>

@@ -1,0 +1,152 @@
+<section class="product-list">
+  <div class="container">
+    <div class="product-list__inner">
+      <ul class="product-filters product-list__filters">
+        <li class="product-filters__item">
+          @@include('filters/_category.html')
+        </li>
+
+        <li class="product-filters__item product-filters__item--price">
+          @@include('filters/_price.html')
+        </li>
+
+        <li class="product-filters__item product-filters__item--brand">
+          @@include('filters/_brand.html')
+        </li>
+
+        <li class="product-filters__item product-filters__item--recent">
+          <div class="recent">
+            <button class="filter-btn filter-title" type="button">
+              recent products
+            </button>
+            <ul class="recent__list product-filter">
+              <li class="recent__item">
+                @@include('cards/_recent-content.html',
+                {"photo": "images/content/products/recent/1.jpg",
+                "title": "Pendant lamp"
+                })
+              </li>
+
+              <li class="recent__item">
+                @@include('cards/_recent-content.html',
+                {"photo": "images/content/products/recent/2.jpg",
+                "title": "Pendant lamp"
+                })
+              </li>
+
+              <li class="recent__item">
+                @@include('cards/_recent-content.html',
+                {"photo": "images/content/products/recent/3.jpg",
+                "title": "Pendant lamp"
+                })
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+
+      <div class="product-content">
+        <div class="product-content__buttons">
+          <button class="product-content__button product-content__button--active button-grid" type="button">
+            <svg class="product-content__svg">
+              <use xlink:href='sprite/sprite.svg#icons--grid'></use>
+            </svg>
+          </button>
+          <button class="product-content__button button-list" type="button">
+            <svg class="product-content__svg">
+              <use xlink:href='sprite/sprite.svg#icons--list'></use>
+            </svg>
+          </button>
+        </div>
+
+        <ul class="product-content__list">
+          <li class="product-content__item">
+            @@include('cards/_product-card.html',
+            {"name": "Wooden radio",
+            "photo": "1"
+            })
+          </li>
+
+          <li class="product-content__item">
+            @@include('cards/_product-card.html',
+            {"name": "Wooden chair",
+            "photo": "2"
+            })
+          </li>
+
+          <li class="product-content__item">
+            @@include('cards/_product-card.html',
+            {"name": "Wooden chair",
+            "photo": "3"
+            })
+          </li>
+
+          <li class="product-content__item">
+            @@include('cards/_product-card.html',
+            {"name": "Wooden radio",
+            "photo": "4"
+            })
+          </li>
+
+          <li class="product-content__item">
+            @@include('cards/_product-card.html',
+            {"name": "Wooden chair",
+            "photo": "5"
+            })
+          </li>
+
+          <li class="product-content__item">
+            @@include('cards/_product-card.html',
+            {"name": "Wooden chair",
+            "photo": "4"
+            })
+          </li>
+
+          <li class="product-content__item">
+            @@include('cards/_product-card.html',
+            {"name": "Wooden radio",
+            "photo": "6"
+            })
+          </li>
+
+          <li class="product-content__item">
+            @@include('cards/_product-card.html',
+            {"name": "Wooden chair",
+            "photo": "7"
+            })
+          </li>
+
+          <li class="product-content__item">
+            @@include('cards/_product-card.html',
+            {"name": "Wooden chair",
+            "photo": "8"
+            })
+          </li>
+
+          <li class="product-content__item">
+            @@include('cards/_product-card.html',
+            {"name": "Wooden radio",
+            "photo": "11"
+            })
+          </li>
+
+          <li class="product-content__item">
+            @@include('cards/_product-card.html',
+            {"name": "Wooden chair",
+            "photo": "12"
+            })
+          </li>
+
+          <li class="product-content__item">
+            @@include('cards/_product-card.html',
+            {"name": "Wooden chair",
+            "photo": "13"
+            })
+          </li>
+        </ul>
+
+        @@include('components/_pagination.html')
+      </div>
+    </div>
+  </div>
+</section>

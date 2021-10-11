@@ -1,0 +1,196 @@
+.filter-title {
+  @extend %DMSans-700;
+  display: inline-block;
+  font-size: 18px;
+  text-transform: uppercase;
+  position: relative;
+  max-width: 200px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  outline: transparent;
+  margin-bottom: 30px;
+  transition: background-color 0.3s, border 0.3s;
+
+  &:focus {
+    background-color: $bg-light;
+  }
+
+  &:hover {
+    background-color: #edf1f4;
+  }
+
+  &:active {
+    background-color: $main-dark;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    background-color: $main-light;
+    width: 38px;
+    height: 3px;
+    top: 11px;
+    right: -53px;
+  }
+}
+
+.category-filter,
+.brand-filter {
+  &__label {
+    cursor: pointer;
+  }
+
+  &__input {
+    @extend %checkbox-hidden;
+    transition: border 0.3s;
+
+    &:checked+.category-filter__contain {
+      background-color: #edf1f4;
+    }
+
+    &:focus+.category-filter__contain {
+      border: 1px solid $main-dark;
+    }
+  }
+
+  &__contain {
+    padding: 9px 18px 8px 23px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    transition: background-color 0.3s, border 0.3s;
+
+    &:hover {
+      background-color: #edf1f4;
+    }
+
+    &:active {
+      background-color: $main;
+    }
+  }
+
+  &__text {
+    color: $main-dark;
+    @include line-camp;
+    max-width: 200px;
+  }
+}
+
+.category-filter__contain {
+  &::after {
+    content: '';
+    position: absolute;
+    right: 17px;
+    top: 9px;
+    width: 6px;
+    height: 10px;
+    background-image: url(../../images/icons/miniarrow-right.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}
+
+.price-filter {
+  &__prices {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__from,
+  &__to,
+  &__dollar {
+    font-size: 14px;
+    margin-top: -6px;
+  }
+
+  .irs--flat .irs-line {
+    height: 3px;
+    background-color: $main-light;
+    top: 1px;
+  }
+
+  .irs--flat .irs-handle {
+    top: -4px;
+    width: 15px;
+    height: 15px;
+    background-color: $main-light;
+    cursor: pointer;
+  }
+
+  .irs--flat .irs-handle>i:first-child {
+    display: none;
+  }
+
+  .irs--flat .irs-bar {
+    display: none;
+  }
+
+  .irs--flat .irs-min,
+  .irs--flat .irs-max {
+    display: none;
+  }
+
+  .irs--flat .irs-from,
+  .irs--flat .irs-to,
+  .irs--flat .irs-single {
+    display: none;
+  }
+}
+
+.brand-filter {
+  &__input {
+    &:checked+.brand-filter__contain {
+      background-color: #edf1f4;
+
+      .brand-filter__text {
+        color: $main-dark;
+      }
+    }
+
+    &:focus+.brand-filter__contain {
+      background-color: $bg-light;
+    }
+  }
+
+  &__text+.brand-filter__text {
+    color: #b3b3b3;
+  }
+}
+
+.search {
+  display: flex;
+
+  &__label {
+    width: 100%;
+    height: 43px;
+  }
+
+  &__input {
+    padding: 5px;
+    width: 100%;
+    height: 43px;
+    border: 1px solid $sky;
+    outline: transparent;
+    transition: border-color 0.3s, background-color 0.3s;
+
+    &:focus {
+      border-color: $main-dark;
+    }
+
+    &:hover {
+      background-color: $main-light;
+    }
+
+    &:active {
+      background-color: $main-dark;
+    }
+  }
+
+  &__btn {
+    width: 48px;
+    height: 43px;
+    box-shadow: none;
+  }
+}

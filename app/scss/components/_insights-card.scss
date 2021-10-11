@@ -1,0 +1,56 @@
+.insights-card {
+  background-color: #ffffff;
+  max-width: 370px;
+  width: 100%;
+  min-height: 420px;
+  border-radius: 5px;
+  box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+  position: relative;
+
+  &__photo {
+    display: block;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+
+  &__img {
+    max-width: 370px;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__info {
+    padding: 35px 20px 15px 29px;
+    position: relative;
+  }
+
+  &__info-link {
+    position: absolute;
+    top: -18px;
+    left: 30px;
+    border-radius: 15px;
+    padding: 4px 31px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 300px
+  }
+
+  &__text {
+    @extend %DMSans-500;
+    max-width: 297px;
+    min-height: 72px;
+    font-size: 18px;
+    line-height: 1.4;
+    color: $black;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    @include line-camp;
+    -webkit-line-clamp: 3;
+  }
+}

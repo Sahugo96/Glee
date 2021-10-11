@@ -1,0 +1,155 @@
+.blog-page {
+  @extend %Rubik-400;
+
+  &--page {
+    .blog-page {
+      &__title,
+      &__text,
+      &__btn {
+        display: none;
+      }
+
+      &__description {
+        display: block;
+        line-height: 1.9;
+
+        h2 {
+          font-size: 36px;
+          color: #333333;
+          @include line-camp;
+          -webkit-line-clamp: 2;
+
+          @include _600 {
+            font-size: 30px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+          }
+        }
+
+        h3 {
+          font-weight: 500;
+          margin-bottom: 10px;
+          font-size: 16px;
+        }
+
+        p {
+          margin-bottom: 40px;
+        }
+
+        blockquote {
+          background-color: $sky;
+          padding: 14px 76px 15px 30px;
+          border-left: 6px solid $main-light;
+          margin-bottom: 70px;
+          line-height: 1.9;
+
+          span {
+            display: block;
+            margin-top: 6px;
+            padding-left: 47px;
+            position: relative;
+
+            &:before {
+              content: '';
+              position: absolute;
+              left: 5px;
+              top: 13px;
+              width: 20px;
+              height: 4px;
+              background-color: $main-light;
+            }
+          }
+        }
+
+        img {
+          width: 322px;
+          height: 209px;
+          float: left;
+          margin-top: -25px;
+          margin-right: 30px;
+          object-fit: cover;
+        }
+
+        h4 {
+          font-weight: 500;
+          color: $main-dark;
+          margin-top: 70px;
+          margin-bottom: 10px;
+
+          @include _768 {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__description {
+    display: none;
+  }
+
+  &__photo {
+    position: relative;
+    margin-bottom: 28px;
+    max-width: 830px;
+    width: 100%;
+    max-height: 502px;
+    display: block;
+    overflow: hidden;
+  }
+
+  &__date {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    max-width: 275px;
+
+    @include _576 {
+      padding: 10px;
+      width: auto;
+    }
+  }
+
+  &__img {
+    max-width: 830px;
+    width: 100%;
+    max-height: 502px;
+    transition: transform 0.3s;
+
+    @include _768 {
+      min-width: auto;
+      min-height: auto;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 21px;
+  }
+
+  &__link {
+    font-size: 36px;
+    color: #333333;
+    @extend %Rubik-400;
+    @extend %link-style;
+    @include line-camp;
+    -webkit-line-clamp: 2;
+
+    @include _576 {
+      font-size: 26px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 28px;
+    line-height: 1.9;
+    @include line-camp;
+    -webkit-line-clamp: 10;
+  }
+
+  &__btn {
+    max-width: 185px;
+    width: 100%;
+    @include line-camp;
+  }
+}

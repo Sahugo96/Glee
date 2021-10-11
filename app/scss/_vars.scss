@@ -1,40 +1,87 @@
-$primary1-color: #fff;
-$primary2-color: #a3bbc8;
-$primary3-color: #243f4d;
-$secondary1-color: #fcd7b6;
-$secondary2-color: #436372;
+$main: #436372;
+$main-light: #a3bbc8;
+$main-dark: #243f4d;
 
-%rubik-400 {
-  font-family: "Rubik-Regular", sans-serif;
-  font-weight: 400;
-}
+$sky: #edf1f4;
 
-%rubik-500 {
-  font-family: "Rubik-Medium", sans-serif;
-  font-weight: 500;
-}
+$bg-light: #fef7f0;
+$bg-medum: #feefe2;
+$bg-dark: #fcd7b6;
 
-%dm_sans-400 {
-  font-family: "DM Sans-Regular", sans-serif;
-  font-weight: 400;
-}
+$black: #333333;
 
-%dm_sans-500 {
-  font-family: "DM Sans-Medium", sans-serif;
-  font-weight: 500;
-}
 
-%dm_sans-700 {
-  font-family: "DM Sans-Bold", sans-serif;
+%DMSans-700 {
+  font-family: 'DM Sans';
   font-weight: 700;
 }
 
-%myriad_pro-400 {
-  font-family: "DM Sans-Regular", sans-serif;
+%DMSans-500 {
+  font-family: 'DM Sans';
+  font-weight: 500;
+}
+
+%DMSans-400 {
+  font-family: 'DM Sans';
   font-weight: 400;
+}
+
+%Rubik-700 {
+  font-family: 'Rubik';
+  font-weight: 700;
+}
+
+%Rubik-500 {
+  font-family: 'Rubik';
+  font-weight: 500;
+}
+
+%Rubik-400 {
+  font-family: 'Rubik';
+  font-weight: 400;
+}
+
+%Rubik-300 {
+  font-family: 'Rubik';
+  font-weight: 300;
 }
 
 %poppins-700 {
-  font-family: "Poppins-Bold", sans-serif;
+  font-family: 'poppins';
   font-weight: 700;
+}
+
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
+%link-style {
+  outline: transparent;
+  border-bottom: 1px solid transparent;
+  transition: border 0.3s, color 0.3s;
+
+  &:active {
+    color: $bg-dark;
+  }
+  
+  &:hover {
+    color: $main-light;
+  }
+  
+  &:focus {
+    outline: transparent;
+    border-bottom: 1px solid #8b4949;
+  }
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
 }

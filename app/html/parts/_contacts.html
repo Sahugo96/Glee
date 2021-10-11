@@ -1,0 +1,85 @@
+<section class="contact">
+  <div class="container">
+    <span class="contact__subtitle">Write Here</span>
+    <h2 class="contact__title title">Get In Touch</h2>
+    <ul class="contact__list">
+      <li class="contact__item">
+        <div class="contact__box">
+          <div class="contact__icon">
+            <svg>
+              <use xlink:href='sprite/sprite.svg#icons--address'></use>
+            </svg>
+          </div>
+          <div class="contact__name">Address</div>
+          <div class="contact__text">
+            <p>2416 Mapleview Drive</p>
+            <p>Tampa, FL 33634</p>
+          </div>
+        </div>
+      </li>
+
+      <li class="contact__item">
+        <div class="contact__box">
+          <div class="contact__icon">
+            <svg>
+              <use xlink:href='sprite/sprite.svg#icons--mail'></use>
+            </svg>
+          </div>
+          <div class="contact__name">Our Email</div>
+          <div class="contact__text">
+            <p>Main Email : 
+              <a class="contact__link" href="mailto:contact@website.com">contact@website.com</a>
+            </p>
+            <p>Inquiries : 
+              <a class="contact__link" href="mailto:Info@mail.com">Info@mail.com</a>
+            </p>
+          </div>
+        </div>
+      </li>
+
+      <li class="contact__item">
+        <div class="contact__box">
+          <div class="contact__icon">
+            <svg>
+              <use xlink:href='sprite/sprite.svg#icons--phone'></use>
+            </svg>
+          </div>
+          <div class="contact__name">Our Phone</div>
+          <div class="contact__text">
+            <p>Office Telephone : 
+              <a class="contact__link" href="tel:0029129102320">0029129102320</a>
+            </p>
+            <p>Mobile : 
+              <a class="contact__link" href="tel:000232439493">000 2324 39493</a>
+            </p>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="contact__bottom">
+      @@include('components/_main-form.html',
+      {"class": "main-form--contact contact__bottom-form",
+      "textarea": "message",
+      "email": "email",
+      "button": "send message"
+      })
+
+      <div id="map" class="map"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+    let map;
+
+    function initMap() {
+    map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 29.754017994612184, lng: -95.36299465376426 },
+    zoom: 9,
+    });
+    }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" async>
+</script>

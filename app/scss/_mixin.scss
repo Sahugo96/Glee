@@ -1,12 +1,37 @@
-@mixin content-clipping($n){
-  display: -webkit-box;
-  -webkit-line-clamp: $n;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+@mixin _1440 {
+  @media (max-width: 1440px) {
+    @content;
+  }
 }
 
-@mixin flex-jc-center($jc) {
-  display: flex;
-  justify-content: $jc;
-  align-items: center;
+@mixin _1024 {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin _768 {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin _600 {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin _576 {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin line-camp {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

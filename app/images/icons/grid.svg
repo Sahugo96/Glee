@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fe3e57;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="grid" class="cls-1" d="M855,613.75h3.75V610H855v3.75ZM860.625,625h3.75v-3.75h-3.75V625ZM855,625h3.75v-3.75H855V625Zm0-5.625h3.75v-3.75H855v3.75Zm5.625,0h3.75v-3.75h-3.75v3.75ZM866.25,610v3.75H870V610h-3.75Zm-5.625,3.75h3.75V610h-3.75v3.75Zm5.625,5.625H870v-3.75h-3.75v3.75Zm0,5.625H870v-3.75h-3.75V625Z" transform="translate(-855 -610)"/>
+</svg>
